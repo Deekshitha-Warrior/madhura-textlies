@@ -66,7 +66,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
         <div className="shrink-0 px-5 py-3.5 border-b border-gray-100 flex items-center justify-between bg-[#FBFAF6]">
           <div className="flex items-center gap-2">
             <Tag size={17} className="text-[#D4AF37]" />
-            <h3 className="text-sm font-bold text-[#0A0A0A]">
+            <h3 className="text-sm font-bold text-[#0B2559]">
               Record Expense
             </h3>
           </div>
@@ -99,7 +99,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
                 required
                 value={expenseDate}
                 onChange={(e) => setExpenseDate(e.target.value)}
-                className="w-full h-11 px-3 pl-9 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A] focus:bg-white transition-all"
+                className="w-full h-11 px-3 pl-9 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559] focus:bg-white transition-all"
               />
               <Calendar size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
             </div>
@@ -113,7 +113,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
             <select
               value={categoryId}
               onChange={(e) => setCategoryId(e.target.value)}
-              className="w-full h-11 px-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A] focus:bg-white cursor-pointer transition-all"
+              className="w-full h-11 px-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559] focus:bg-white cursor-pointer transition-all"
             >
               {categories.map((cat) => (
                 <option key={cat.id} value={cat.id}>
@@ -129,7 +129,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
               Amount (₹) <span className="text-red-500">*</span>
             </label>
             <div className="relative">
-              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 font-bold text-sm text-[#0A0A0A]">
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 font-bold text-sm text-[#0B2559]">
                 ₹
               </span>
               <input
@@ -140,7 +140,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
                 placeholder="0.00"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="w-full h-11 pl-8 pr-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-sm font-bold text-gray-900 outline-none focus:border-[#0A0A0A] focus:bg-white transition-all [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                className="w-full h-11 pl-8 pr-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-sm font-bold text-gray-900 outline-none focus:border-[#0B2559] focus:bg-white transition-all [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
           </div>
@@ -155,7 +155,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
               placeholder="Optional details (e.g. Shop electric bill, store supplies)..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full p-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-medium text-gray-900 outline-none focus:border-[#0A0A0A] focus:bg-white resize-none transition-all"
+              className="w-full p-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-medium text-gray-900 outline-none focus:border-[#0B2559] focus:bg-white resize-none transition-all"
             />
           </div>
 
@@ -171,7 +171,7 @@ export const RecordExpenseModal: React.FC<RecordExpenseModalProps> = ({
             <button
               type="submit"
               disabled={loading}
-              className="flex-[1.5] h-11 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] text-xs font-bold hover:bg-[#1A1A1A] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="flex-[1.5] h-11 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] text-xs font-bold hover:bg-[#164AAB] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               {loading ? 'Saving...' : 'Save Expense'}
             </button>

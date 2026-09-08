@@ -160,7 +160,7 @@ export default function Gallery() {
         <div
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
-            backgroundImage: 'radial-gradient(circle, #111111 1.5px, transparent 1.5px)',
+            backgroundImage: 'radial-gradient(circle, #0F172A 1.5px, transparent 1.5px)',
             backgroundSize: '28px 28px',
           }}
         />
@@ -173,7 +173,7 @@ export default function Gallery() {
           <p className="text-[10px] font-black uppercase tracking-[0.26em] text-[#D4AF37] mb-4">
             {BRAND_EN}
           </p>
-          <h1 className="text-[2.8rem] sm:text-[3.6rem] font-black text-[#111111] tracking-tight leading-[1.02] mb-4">
+          <h1 className="text-[2.8rem] sm:text-[3.6rem] font-black text-[#0F172A] tracking-tight leading-[1.02] mb-4">
             Inside Our Store
           </h1>
           <p className="text-[14px] sm:text-[16px] font-bold text-[#B48811] mb-4">
@@ -198,7 +198,7 @@ export default function Gallery() {
             { value: '100%', label: 'Authentic & Natural' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-[2rem] sm:text-[2.5rem] font-black text-[#111111] leading-none">{stat.value}</p>
+              <p className="text-[2rem] sm:text-[2.5rem] font-black text-[#0F172A] leading-none">{stat.value}</p>
               <p className="text-[11px] font-bold text-[#374151] mt-1 uppercase tracking-[0.15em]">{stat.label}</p>
             </div>
           ))}
@@ -228,7 +228,7 @@ export default function Gallery() {
                     group-hover:scale-[1.04] transition-transform duration-500 ease-out"
                 />
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-[#111111]/0 group-hover:bg-[#111111]/40
+                <div className="absolute inset-0 bg-[#0F172A]/0 group-hover:bg-[#0F172A]/40
                   transition-colors duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300
                     flex flex-col items-center gap-2 text-white">
@@ -238,7 +238,7 @@ export default function Gallery() {
                 </div>
                 {/* Heritage badge on first image */}
                 {idx === 0 && (
-                  <div className="absolute top-3 left-3 bg-[#111111] text-white
+                  <div className="absolute top-3 left-3 bg-[#0F172A] text-white
                     text-[9px] font-black uppercase tracking-[0.2em]
                     px-2.5 py-1 rounded-full">
                     Since 1945

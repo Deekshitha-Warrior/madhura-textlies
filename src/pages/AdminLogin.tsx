@@ -38,10 +38,10 @@ export default function AdminLogin() {
 
   return (
     <div className="relative h-screen max-h-screen min-h-screen overflow-y-auto lg:overflow-hidden bg-white p-3 sm:p-5 lg:p-6 font-sans flex items-center justify-center">
-      <div className="relative grid w-full max-w-4xl max-h-[92vh] overflow-hidden rounded-3xl border border-gray-200/90 bg-[#141414] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25),0_12px_28px_-6px_rgba(0,0,0,0.15)] lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="hidden flex-col justify-between bg-[#0A0A0A] border-r border-[#D4AF37]/20 p-6 lg:p-8 text-white lg:flex overflow-y-auto hide-scrollbar">
+      <div className="relative grid w-full max-w-4xl max-h-[92vh] overflow-hidden rounded-3xl border border-gray-200/90 bg-[#123E94] shadow-[0_25px_60px_-12px_rgba(0,0,0,0.25),0_12px_28px_-6px_rgba(0,0,0,0.15)] lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="hidden flex-col justify-between bg-[#0B2559] border-r border-[#D4AF37]/20 p-6 lg:p-8 text-white lg:flex overflow-y-auto hide-scrollbar">
           <div>
-            <div className="mb-5 inline-flex items-center gap-2 rounded-2xl bg-[#141414] border border-[#D4AF37]/40 px-3.5 py-2 shadow-xl">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-2xl bg-[#123E94] border border-[#D4AF37]/40 px-3.5 py-2 shadow-xl">
               <img src={BRAND_LOGO} alt={BRAND_EN} className="h-8 w-8 object-contain" />
               <span className="text-xs font-black tracking-widest text-white uppercase">{BRAND_EN}</span>
             </div>
@@ -51,13 +51,13 @@ export default function AdminLogin() {
           </div>
           <div className="mt-6 flex items-center gap-2 text-xs font-bold text-[#D4AF37]"><ShieldCheck size={15} /> Secure retail workspace</div>
         </div>
-        <div className="p-5 sm:p-7 lg:p-8 bg-white text-[#111111] overflow-y-auto hide-scrollbar flex flex-col justify-center">
+        <div className="p-5 sm:p-7 lg:p-8 bg-white text-[#0F172A] overflow-y-auto hide-scrollbar flex flex-col justify-center">
           {/* Brand */}
           <div className="mb-4 sm:mb-5 flex flex-col items-center text-center lg:items-start lg:text-left">
             <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#B48811]">{BRAND_SUBTITLE}</p>
-            <h1 className="mt-1 text-2xl sm:text-3xl font-black tracking-tight text-[#0A0A0A]">{BRAND_EN}</h1>
+            <h1 className="mt-1 text-2xl sm:text-3xl font-black tracking-tight text-[#0B2559]">{BRAND_EN}</h1>
             <p className="mt-0.5 text-xs font-semibold text-[#7A786F]">{BRAND_TA}</p>
-            <p className="mt-2.5 inline-flex items-center gap-1.5 rounded-full border border-[#D4AF37] bg-[#FBFAF6] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#0A0A0A]">
+            <p className="mt-2.5 inline-flex items-center gap-1.5 rounded-full border border-[#D4AF37] bg-[#FBFAF6] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#0B2559]">
               <ShieldCheck size={12} className="text-[#B48811]" />
               {l('Admin / Staff Portal', 'நிர்வாக நுழைவு')}
             </p>
@@ -73,7 +73,7 @@ export default function AdminLogin() {
 
           {/* Login Form */}
           <form onSubmit={handleSubmit} noValidate className="space-y-3.5">
-            <p className="text-xs font-bold text-[#111111]">{l('Enter your portal credentials', 'உங்கள் பயனர் விவரங்களை உள்ளிடவும்')}</p>
+            <p className="text-xs font-bold text-[#0F172A]">{l('Enter your portal credentials', 'உங்கள் பயனர் விவரங்களை உள்ளிடவும்')}</p>
 
             <div>
               <label className="mb-1 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wide text-[#6B7280]">
@@ -85,7 +85,7 @@ export default function AdminLogin() {
                 type="text"
                 autoComplete="username"
                 placeholder="Enter portal ID"
-                className="w-full rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold outline-none transition-colors placeholder:text-[#AAA69C] focus:border-[#0A0A0A] focus:bg-white text-[#111111]"
+                className="w-full rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] px-3.5 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold outline-none transition-colors placeholder:text-[#AAA69C] focus:border-[#0B2559] focus:bg-white text-[#0F172A]"
                 value={portalId}
                 onChange={(e) => { setPortalId(e.target.value); setError('') }}
                 disabled={loading}
@@ -104,7 +104,7 @@ export default function AdminLogin() {
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="current-password"
                   placeholder="Enter portal password"
-                  className="w-full rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] px-3.5 py-2.5 sm:py-3 pr-11 text-xs sm:text-sm font-semibold outline-none transition-colors placeholder:text-[#AAA69C] focus:border-[#0A0A0A] focus:bg-white text-[#111111]"
+                  className="w-full rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] px-3.5 py-2.5 sm:py-3 pr-11 text-xs sm:text-sm font-semibold outline-none transition-colors placeholder:text-[#AAA69C] focus:border-[#0B2559] focus:bg-white text-[#0F172A]"
                   value={password}
                   onChange={(e) => { setPassword(e.target.value); setError('') }}
                   disabled={loading}
@@ -113,7 +113,7 @@ export default function AdminLogin() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-[#6B7280] hover:bg-[#F9FAFB] hover:text-[#111111] cursor-pointer"
+                  className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-[#6B7280] hover:bg-[#F9FAFB] hover:text-[#0F172A] cursor-pointer"
                   aria-label={showPassword ? l('Hide password', 'கடவுச்சொல்லை மறை') : l('Show password', 'கடவுச்சொல்லை காட்டு')}
                 >
                   {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -124,7 +124,7 @@ export default function AdminLogin() {
             <button
               type="submit"
               disabled={loading}
-              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] py-3 font-black text-xs sm:text-sm text-[#D4AF37] shadow-lg shadow-black/20 transition-all hover:bg-[#1A1A1A] hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 cursor-pointer"
+              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#0B2559] border border-[#D4AF37] py-3 font-black text-xs sm:text-sm text-[#D4AF37] shadow-lg shadow-black/20 transition-all hover:bg-[#164AAB] hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 cursor-pointer"
             >
               {loading ? (
                 <>

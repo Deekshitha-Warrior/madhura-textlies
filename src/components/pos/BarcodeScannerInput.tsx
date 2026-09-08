@@ -354,7 +354,7 @@ export const BarcodeScannerInput: React.FC<BarcodeScannerInputProps> = ({
             onChange={(e) => setManualCode(e.target.value)}
             onClick={handleInputBarClick}
             disabled={disabled || loading}
-            className="w-full pl-10 pr-24 py-3 rounded-2xl border-2 border-[#E8D399] bg-[#FBFAF6] font-bold text-sm text-black placeholder:text-gray-400 outline-none focus:border-[#0A0A0A] focus:bg-white shadow-xs transition-all"
+            className="w-full pl-10 pr-24 py-3 rounded-2xl border-2 border-[#E8D399] bg-[#FBFAF6] font-bold text-sm text-black placeholder:text-gray-400 outline-none focus:border-[#0B2559] focus:bg-white shadow-xs transition-all"
           />
 
           <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
@@ -362,7 +362,7 @@ export const BarcodeScannerInput: React.FC<BarcodeScannerInputProps> = ({
               <button
                 type="submit"
                 disabled={loading}
-                className="px-3 py-1.5 rounded-xl bg-[#0A0A0A] text-[#D4AF37] text-xs font-black hover:bg-[#1A1A1A] cursor-pointer"
+                className="px-3 py-1.5 rounded-xl bg-[#0B2559] text-[#D4AF37] text-xs font-black hover:bg-[#164AAB] cursor-pointer"
               >
                 {loading ? '...' : 'Add'}
               </button>
@@ -403,7 +403,7 @@ export const BarcodeScannerInput: React.FC<BarcodeScannerInputProps> = ({
           }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
         >
-          <div className="bg-[#0A0A0A] rounded-3xl max-w-md w-full border border-[#D4AF37] shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-200 text-white">
+          <div className="bg-[#0B2559] rounded-3xl max-w-md w-full border border-[#D4AF37] shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-200 text-white">
             <div className="px-5 py-4 border-b border-[#D4AF37]/30 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Camera size={18} className="text-[#D4AF37]" />
@@ -432,7 +432,7 @@ export const BarcodeScannerInput: React.FC<BarcodeScannerInputProps> = ({
                   <select
                     value={selectedDeviceId}
                     onChange={(e) => setSelectedDeviceId(e.target.value)}
-                    className="w-full bg-[#1A1A1A] border border-gray-700 text-xs font-bold text-white rounded-lg px-2 py-1.5 outline-none focus:border-[#D4AF37]"
+                    className="w-full bg-[#164AAB] border border-gray-700 text-xs font-bold text-white rounded-lg px-2 py-1.5 outline-none focus:border-[#D4AF37]"
                   >
                     {videoDevices.map((d) => (
                       <option key={d.deviceId} value={d.deviceId}>

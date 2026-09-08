@@ -194,7 +194,7 @@ function StatCard({
         <div className={`flex h-8 w-8 items-center justify-center rounded-xl ${bg} ${color}`}>{icon}</div>
       </div>
       <p className="mb-2 text-[11px] font-semibold text-[#7A846F]">{helper}</p>
-      <p className="break-words text-[22px] font-black leading-tight text-[#111111]">{value}</p>
+      <p className="break-words text-[22px] font-black leading-tight text-[#0F172A]">{value}</p>
     </div>
   )
 }
@@ -573,7 +573,7 @@ export default function BillingAnalytics() {
   if (authLoading || loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#F8F9FA]">
-        <span className="h-10 w-10 animate-spin rounded-full border-4 border-[#E5E7EB] border-t-[#111111]" />
+        <span className="h-10 w-10 animate-spin rounded-full border-4 border-[#E5E7EB] border-t-[#0F172A]" />
       </div>
     )
   }
@@ -582,9 +582,9 @@ export default function BillingAnalytics() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#F8F9FA] p-4">
         <div className="max-w-sm rounded-3xl bg-white p-8 text-center shadow-xl">
-          <h1 className="mb-2 text-2xl font-black text-[#111111]">Unauthorized</h1>
+          <h1 className="mb-2 text-2xl font-black text-[#0F172A]">Unauthorized</h1>
           <p className="mb-6 text-sm text-[#374151]">Admin access is required to view billing analytics.</p>
-          <Link to="/" className="inline-flex items-center gap-2 rounded-xl bg-[#111111] px-5 py-3 text-sm font-bold text-white">
+          <Link to="/" className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-5 py-3 text-sm font-bold text-white">
             <LayoutDashboard size={16} />
             Go Home
           </Link>
@@ -598,12 +598,12 @@ export default function BillingAnalytics() {
       <div className="mx-auto max-w-[1600px] px-4 py-4 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div className="admin-logo-lockup min-w-[280px]">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A0A0A] border border-[#D4AF37]/40 shadow-sm shrink-0">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0B2559] border border-[#D4AF37]/40 shadow-sm shrink-0">
               <img src={BRAND_LOGO} alt={BRAND_EN} className="h-full w-full object-contain" />
             </div>
             <div className="min-w-0">
               <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#5F5F5F]">Admin Billing</p>
-              <h1 className="mt-1 truncate text-2xl font-black text-[#111111]">{l('Billing Analytics', 'பில் பகுப்பாய்வு')}</h1>
+              <h1 className="mt-1 truncate text-2xl font-black text-[#0F172A]">{l('Billing Analytics', 'பில் பகுப்பாய்வு')}</h1>
               <p className="mt-1 text-sm text-[#5F5F5F]">Dedicated analytics view for billing, revenue, products, categories, and coupons.</p>
             </div>
           </div>
@@ -643,7 +643,7 @@ export default function BillingAnalytics() {
                 onClick={() => applyAnalyticsPreset(preset)}
                 className={`rounded-xl px-3 py-1.5 text-[12px] font-black transition-colors ${
                   analyticsDatePreset === preset
-                    ? 'bg-[#111111] text-white'
+                    ? 'bg-[#0F172A] text-white'
                     : 'bg-[#F9FAFB] text-[#374151] hover:bg-[#E5E7EB]/40'
                 }`}
               >
@@ -729,7 +729,7 @@ export default function BillingAnalytics() {
                   onClick={() => setBillTypeFilter(v)}
                   className={`rounded-xl px-3 py-1.5 text-[12px] font-black transition-colors ${
                     billTypeFilter === v
-                      ? 'bg-[#111111] text-white'
+                      ? 'bg-[#0F172A] text-white'
                       : 'bg-[#F9FAFB] text-[#374151] hover:bg-[#E5E7EB]/40'
                   }`}
                 >
@@ -806,7 +806,7 @@ export default function BillingAnalytics() {
                     return (
                       <tr key={order.id} className="hover:bg-[#F9FAFB]/50">
                         <td className="whitespace-nowrap px-3 py-3 font-bold text-[#10B981]">{order.invoice_no || '—'}</td>
-                        <td className="max-w-[140px] truncate px-3 py-3 font-semibold text-[#111111]">{order.customer_name}</td>
+                        <td className="max-w-[140px] truncate px-3 py-3 font-semibold text-[#0F172A]">{order.customer_name}</td>
                         <td className="whitespace-nowrap px-3 py-3 text-[#374151]">{order.phone}</td>
                         <td className="px-3 py-3">
                           <span className={`rounded-full px-2 py-0.5 text-[10px] font-black uppercase ${billTypeClass}`}>{billTypeLabel}</span>
@@ -845,7 +845,7 @@ export default function BillingAnalytics() {
                     <div key={`${product.name}-${product.variant}-${index}`} className="rounded-xl bg-[#F9FAFB] p-3">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <p className="font-black text-[#111111]">{product.name}</p>
+                          <p className="font-black text-[#0F172A]">{product.name}</p>
                           <p className="text-[11px] text-[#7A846F]">{product.variant || 'Variant not set'}</p>
                         </div>
                         <p className="text-right text-[12px] font-black text-emerald-700">{formatCurrency(product.revenue)}</p>
@@ -870,7 +870,7 @@ export default function BillingAnalytics() {
                     <div key={`${category.name}-${index}`} className="rounded-xl bg-[#F9FAFB] p-3">
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <p className="font-black text-[#111111]">{category.name}</p>
+                          <p className="font-black text-[#0F172A]">{category.name}</p>
                           <p className="text-[11px] text-[#7A846F]">Qty sold: {Math.round(category.qty)}</p>
                         </div>
                         <p className="text-[12px] font-black text-emerald-700">{formatCurrency(category.revenue)}</p>
@@ -890,11 +890,11 @@ export default function BillingAnalytics() {
                   {analytics.topCoupons.map((coupon) => (
                     <div key={coupon.code} className="flex items-center justify-between gap-3 rounded-xl bg-[#F9FAFB] p-3">
                       <div>
-                        <p className="font-black text-[#111111]">{coupon.code}</p>
+                        <p className="font-black text-[#0F172A]">{coupon.code}</p>
                         <p className="text-[11px] text-[#7A846F]">Used {coupon.usage} time(s)</p>
                       </div>
                       <div className="text-right">
-                        <p className="font-black text-[#111111]">{formatCurrency(coupon.discounts)}</p>
+                        <p className="font-black text-[#0F172A]">{formatCurrency(coupon.discounts)}</p>
                         <p className="text-[11px] text-[#7A846F]">Discounts given</p>
                       </div>
                     </div>

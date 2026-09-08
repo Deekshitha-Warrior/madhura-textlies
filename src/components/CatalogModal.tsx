@@ -129,7 +129,7 @@ export default function CatalogModal({ isOpen, onClose, onAdd }: CatalogModalPro
         {editingProduct ? (
           <>
             <div className="flex items-center justify-between p-6 border-b border-[#E5E7EB]/40 bg-[#F9FAFB]">
-              <h2 className="text-xl font-black text-[#111111]">Edit Product</h2>
+              <h2 className="text-xl font-black text-[#0F172A]">Edit Product</h2>
               <button onClick={cancelEdit} className="p-2 rounded-xl hover:bg-black/5 text-[#374151]">
                 <X size={20} />
               </button>
@@ -171,7 +171,7 @@ export default function CatalogModal({ isOpen, onClose, onAdd }: CatalogModalPro
         ) : (
           <>
             <div className="flex items-center justify-between p-5 border-b border-[#E5E7EB]/40 bg-[#F9FAFB]">
-              <h2 className="text-[18px] font-black text-[#111111] flex items-center gap-2">
+              <h2 className="text-[18px] font-black text-[#0F172A] flex items-center gap-2">
                 <Search size={18} className="text-[#D4AF37]" />
                 Search Catalog
               </h2>
@@ -185,7 +185,7 @@ export default function CatalogModal({ isOpen, onClose, onAdd }: CatalogModalPro
                 <input type="text" value={search}
                   onChange={e => setSearch(e.target.value)}
                   placeholder="Search by product name, Tamil name, or category..."
-                  className="w-full pl-10 pr-4 py-3 bg-[#FAFAFA] border border-[#E5E7EB]/60 rounded-xl focus:outline-none focus:border-[#D4AF37] text-[13px] font-bold text-[#111111]" />
+                  className="w-full pl-10 pr-4 py-3 bg-[#FAFAFA] border border-[#E5E7EB]/60 rounded-xl focus:outline-none focus:border-[#D4AF37] text-[13px] font-bold text-[#0F172A]" />
               </div>
               <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
                 {categories.map(cat => (
@@ -228,12 +228,12 @@ export default function CatalogModal({ isOpen, onClose, onAdd }: CatalogModalPro
                         </button>
                       </div>
                       <div onClick={() => onAdd(product)} className="cursor-pointer flex-1">
-                        <h4 className="text-[13px] font-black text-[#111111] leading-tight group-hover:text-[#D4AF37] transition-colors">{product.name}</h4>
+                        <h4 className="text-[13px] font-black text-[#0F172A] leading-tight group-hover:text-[#D4AF37] transition-colors">{product.name}</h4>
                         {product.nameTa && <p className="text-[10px] font-bold text-[#374151] mt-0.5">{product.nameTa}</p>}
                       </div>
                       <div onClick={() => onAdd(product)} className="cursor-pointer">
                         <div className="flex items-end justify-between mt-2 pt-2 border-t border-[#E5E7EB]/30">
-                          <span className="text-[14px] font-black text-[#111111]">₹{product.price}</span>
+                          <span className="text-[14px] font-black text-[#0F172A]">₹{product.price}</span>
                           <span className="text-[9px] font-black text-[#374151] uppercase tracking-wider bg-[#F9FAFB] px-2 py-1 rounded border border-[#E5E7EB]/40">{product.category}</span>
                         </div>
                       </div>

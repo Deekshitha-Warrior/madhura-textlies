@@ -454,7 +454,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                 type="button"
                 onClick={() => setShowSettingsDrawer(true)}
                 title="Barcode Settings"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-[#0A0A0A] flex items-center justify-center text-white transition-colors cursor-pointer"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#D4AF37] hover:text-[#0B2559] flex items-center justify-center text-white transition-colors cursor-pointer"
               >
                 <Settings size={16} />
               </button>
@@ -510,7 +510,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                       </label>
                       <div
                         onClick={() => setDropdownOpen(true)}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white flex items-center justify-between cursor-pointer focus-within:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white flex items-center justify-between cursor-pointer focus-within:border-[#0B2559]"
                       >
                         <input
                           type="text"
@@ -575,7 +575,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                           placeholder="Enter Item Code"
                           value={itemCode}
                           onChange={(e) => setItemCode(e.target.value)}
-                          className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-mono font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                          className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-mono font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                         />
                         <button
                           type="button"
@@ -622,7 +622,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               text: `Added all ${variants.length} variants for "${selectedProduct.name}" to the queue!`,
                             })
                           }}
-                          className="px-2.5 py-1 rounded-md bg-[#0A0A0A] text-[#D4AF37] border border-[#D4AF37] text-[10px] font-black uppercase tracking-wider hover:bg-[#1A1A1A] transition-all flex items-center gap-1 cursor-pointer shadow-xs"
+                          className="px-2.5 py-1 rounded-md bg-[#0B2559] text-[#D4AF37] border border-[#D4AF37] text-[10px] font-black uppercase tracking-wider hover:bg-[#164AAB] transition-all flex items-center gap-1 cursor-pointer shadow-xs"
                         >
                           <Plus size={11} /> Add All {variants.length} Variants to Queue
                         </button>
@@ -653,7 +653,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                         required
                         value={noOfLabels}
                         onChange={(e) => setNoOfLabels(Math.max(1, parseInt(e.target.value) || 1))}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-black text-gray-900 outline-none focus:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-black text-gray-900 outline-none focus:border-[#0B2559]"
                       />
                     </div>
                     <div>
@@ -665,7 +665,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                         placeholder="Enter Header"
                         value={header}
                         onChange={(e) => setHeader(e.target.value)}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                       />
                     </div>
                     <div>
@@ -677,7 +677,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                         placeholder="Enter Line 1"
                         value={line1}
                         onChange={(e) => setLine1(e.target.value)}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                       />
                     </div>
                   </div>
@@ -693,7 +693,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                         placeholder="Enter Line 2"
                         value={line2}
                         onChange={(e) => setLine2(e.target.value)}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                       />
                     </div>
                     <div>
@@ -705,7 +705,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                         placeholder="Enter Line 3"
                         value={line3}
                         onChange={(e) => setLine3(e.target.value)}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                       />
                     </div>
                     <div>
@@ -717,7 +717,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                         placeholder="Enter Line 4"
                         value={line4}
                         onChange={(e) => setLine4(e.target.value)}
-                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                        className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                       />
                     </div>
                   </div>
@@ -768,7 +768,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                   <button
                     type="button"
                     onClick={handleAddToQueue}
-                    className="w-full mt-3 py-2.5 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] text-xs font-black uppercase tracking-wider hover:bg-[#1A1A1A] transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
+                    className="w-full mt-3 py-2.5 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] text-xs font-black uppercase tracking-wider hover:bg-[#164AAB] transition-all shadow-md flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Plus size={14} /> Add for Barcode
                   </button>
@@ -808,7 +808,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                             type="checkbox"
                             checked={queue.every((it) => it.selected)}
                             onChange={(e) => handleToggleSelectAll(e.target.checked)}
-                            className="accent-[#0A0A0A] w-4 h-4 rounded cursor-pointer"
+                            className="accent-[#0B2559] w-4 h-4 rounded cursor-pointer"
                           />
                         </th>
                         <th className="p-3">Item Name</th>
@@ -831,7 +831,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               onChange={(e) =>
                                 handleUpdateQueueItem(item.id, 'selected', e.target.checked)
                               }
-                              className="accent-[#0A0A0A] w-4 h-4 rounded cursor-pointer"
+                              className="accent-[#0B2559] w-4 h-4 rounded cursor-pointer"
                             />
                           </td>
                           <td className="p-3 font-bold text-gray-900">
@@ -852,7 +852,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                                   Math.max(1, parseInt(e.target.value) || 1)
                                 )
                               }
-                              className="w-20 h-8 px-2 rounded-lg border border-gray-300 font-black text-center text-xs outline-none focus:border-[#0A0A0A]"
+                              className="w-20 h-8 px-2 rounded-lg border border-gray-300 font-black text-center text-xs outline-none focus:border-[#0B2559]"
                             />
                           </td>
                           <td className="p-3">
@@ -862,7 +862,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               onChange={(e) =>
                                 handleUpdateQueueItem(item.id, 'header', e.target.value)
                               }
-                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs font-bold outline-none focus:border-[#0A0A0A]"
+                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs font-bold outline-none focus:border-[#0B2559]"
                             />
                           </td>
                           <td className="p-3">
@@ -872,7 +872,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               onChange={(e) =>
                                 handleUpdateQueueItem(item.id, 'line1', e.target.value)
                               }
-                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0A0A0A]"
+                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0B2559]"
                             />
                           </td>
                           <td className="p-3">
@@ -882,7 +882,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               onChange={(e) =>
                                 handleUpdateQueueItem(item.id, 'line2', e.target.value)
                               }
-                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0A0A0A]"
+                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0B2559]"
                             />
                           </td>
                           <td className="p-3">
@@ -892,7 +892,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               onChange={(e) =>
                                 handleUpdateQueueItem(item.id, 'line3', e.target.value)
                               }
-                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0A0A0A]"
+                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0B2559]"
                             />
                           </td>
                           <td className="p-3">
@@ -902,7 +902,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               onChange={(e) =>
                                 handleUpdateQueueItem(item.id, 'line4', e.target.value)
                               }
-                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0A0A0A]"
+                              className="w-28 h-8 px-2 rounded-lg border border-gray-300 text-xs outline-none focus:border-[#0B2559]"
                             />
                           </td>
                           <td className="p-3 text-center">
@@ -951,7 +951,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                 <button
                   type="button"
                   onClick={() => setShowSheetPreviewModal(true)}
-                  className="px-5 py-2.5 rounded-xl border-2 border-[#0A0A0A] bg-white text-[#0A0A0A] text-xs font-black uppercase tracking-wider hover:bg-gray-100 transition-all cursor-pointer"
+                  className="px-5 py-2.5 rounded-xl border-2 border-[#0B2559] bg-white text-[#0B2559] text-xs font-black uppercase tracking-wider hover:bg-gray-100 transition-all cursor-pointer"
                 >
                   Preview
                 </button>
@@ -961,7 +961,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                 type="button"
                 onClick={handleGenerateAndCommitStock}
                 disabled={generating || queue.filter((it) => it.selected).length === 0}
-                className="px-6 py-2.5 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] text-xs font-black uppercase tracking-wider hover:bg-[#1A1A1A] transition-all shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                className="px-6 py-2.5 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] text-xs font-black uppercase tracking-wider hover:bg-[#164AAB] transition-all shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
               >
                 {generating ? (
                   <>

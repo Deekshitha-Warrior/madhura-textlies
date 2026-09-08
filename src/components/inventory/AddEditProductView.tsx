@@ -522,7 +522,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
               placeholder="Search products, SKUs, barcode..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-8 pr-3 py-1.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+              className="w-full pl-8 pr-3 py-1.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
             />
           </div>
         </div>
@@ -614,7 +614,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                   placeholder="e.g. Linen Cotton Shirt"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                 />
               </div>
 
@@ -627,7 +627,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                   placeholder="e.g. காட்டன் சட்டை"
                   value={nameTa}
                   onChange={(e) => setNameTa(e.target.value)}
-                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                 />
               </div>
             </div>
@@ -641,7 +641,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                 <select
                   value={categoryId}
                   onChange={(e) => setCategoryId(e.target.value ? Number(e.target.value) : '')}
-                  className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                  className="w-full h-10 px-3 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                 >
                   <option value="">-- Select Category --</option>
                   {categories.map((c) => (
@@ -662,7 +662,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                   placeholder={hasVariants ? 'Defined at variant level' : 'e.g. 8901234567'}
                   value={barcode}
                   onChange={(e) => setBarcode(e.target.value)}
-                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A] disabled:bg-gray-100 disabled:text-gray-400"
+                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559] disabled:bg-gray-100 disabled:text-gray-400"
                 />
               </div>
 
@@ -676,7 +676,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                   placeholder="5"
                   value={lowStockAlert}
                   onChange={(e) => setLowStockAlert(e.target.value)}
-                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                  className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                 />
               </div>
             </div>
@@ -696,7 +696,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                     placeholder="0.00"
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
-                    className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                    className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                   />
                 </div>
 
@@ -711,7 +711,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                     placeholder="0.00"
                     value={purchasePrice}
                     onChange={(e) => setPurchasePrice(e.target.value)}
-                    className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                    className="w-full h-10 px-3.5 rounded-xl border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                   />
                 </div>
 
@@ -742,7 +742,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                 placeholder="Product material, care instructions, or rack location notes..."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="w-full p-3 rounded-xl border border-gray-300 bg-white text-xs font-medium text-gray-900 outline-none focus:border-[#0A0A0A] resize-none"
+                className="w-full p-3 rounded-xl border border-gray-300 bg-white text-xs font-medium text-gray-900 outline-none focus:border-[#0B2559] resize-none"
               />
             </div>
 
@@ -769,7 +769,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                     }}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#0A0A0A]" />
+                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#0B2559]" />
                 </label>
               </div>
 
@@ -782,7 +782,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                     <button
                       type="button"
                       onClick={handleAddVariantRow}
-                      className="px-3 py-1 rounded-lg bg-[#0A0A0A] text-[#D4AF37] text-xs font-black flex items-center gap-1 hover:bg-[#1A1A1A] cursor-pointer"
+                      className="px-3 py-1 rounded-lg bg-[#0B2559] text-[#D4AF37] text-xs font-black flex items-center gap-1 hover:bg-[#164AAB] cursor-pointer"
                     >
                       <Plus size={12} /> Add Variant
                     </button>
@@ -804,7 +804,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                             placeholder="M, Red-38, etc."
                             value={v.variantName}
                             onChange={(e) => handleUpdateVariantRow(v.id, 'variantName', e.target.value)}
-                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                           />
                         </div>
 
@@ -820,7 +820,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                             placeholder="0.00"
                             value={v.price || ''}
                             onChange={(e) => handleUpdateVariantRow(v.id, 'price', parseFloat(e.target.value) || 0)}
-                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                           />
                         </div>
 
@@ -835,7 +835,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                             placeholder="0.00"
                             value={v.costPrice || ''}
                             onChange={(e) => handleUpdateVariantRow(v.id, 'costPrice', parseFloat(e.target.value) || 0)}
-                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                           />
                         </div>
 
@@ -862,7 +862,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
                             placeholder="Optional"
                             value={v.customBarcode || ''}
                             onChange={(e) => handleUpdateVariantRow(v.id, 'customBarcode', e.target.value)}
-                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                            className="w-full h-8 px-2.5 rounded-lg border border-gray-300 bg-white text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                           />
                         </div>
 
@@ -896,7 +896,7 @@ export const AddEditProductView: React.FC<{ onStockUpdated?: () => void }> = ({ 
             <button
               type="submit"
               disabled={loading}
-              className="px-5 py-2 sm:px-6 sm:py-2.5 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] text-xs font-black uppercase tracking-wider hover:bg-[#1A1A1A] transition-all shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
+              className="px-5 py-2 sm:px-6 sm:py-2.5 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] text-xs font-black uppercase tracking-wider hover:bg-[#164AAB] transition-all shadow-md flex items-center gap-2 cursor-pointer disabled:opacity-50"
             >
               {loading ? (
                 <>

@@ -177,7 +177,7 @@ export default function Products() {
       <div className="bg-white border-b border-[#E5E7EB]/30">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:py-10 text-center">
           <motion.h1 initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
-            className="text-2xl sm:text-4xl font-black font-headline text-[#111111] mb-2">{t('products.title')}</motion.h1>
+            className="text-2xl sm:text-4xl font-black font-headline text-[#0F172A] mb-2">{t('products.title')}</motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}
             className="text-sm sm:text-base text-[#374151] font-medium">{t('products.sub')}</motion.p>
         </div>
@@ -277,7 +277,7 @@ export default function Products() {
                <div className="w-20 h-20 bg-[#F9FAFB] rounded-full flex items-center justify-center mb-6">
                  <Search className="text-[#E5E7EB]" size={32}/>
                </div>
-               <h3 className="text-xl font-black mb-2 text-[#111111]">{t('products.none')}</h3>
+               <h3 className="text-xl font-black mb-2 text-[#0F172A]">{t('products.none')}</h3>
                <p className="text-[#374151] max-w-xs mx-auto mb-6 text-sm">No products found matching your filters.</p>
                <button onClick={clear} className="text-sm font-black text-[#D4AF37] hover:underline">Clear all filters</button>
             </div>

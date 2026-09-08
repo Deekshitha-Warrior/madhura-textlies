@@ -166,7 +166,7 @@ export const ExpensesView: React.FC = () => {
       {/* Top Header & Tab Pills */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 pb-4">
         <div>
-          <h2 className="text-xl font-bold tracking-tight text-[#0A0A0A] flex items-center gap-2">
+          <h2 className="text-xl font-bold tracking-tight text-[#0B2559] flex items-center gap-2">
             <Receipt size={22} className="text-[#D4AF37]" />
             Expense Tracker
           </h2>
@@ -182,7 +182,7 @@ export const ExpensesView: React.FC = () => {
             onClick={() => setActiveTab('expenses')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeTab === 'expenses'
-                ? 'bg-[#0A0A0A] text-[#D4AF37] shadow-sm'
+                ? 'bg-[#0B2559] text-[#D4AF37] shadow-sm'
                 : 'text-gray-700 hover:text-black'
             }`}
           >
@@ -193,7 +193,7 @@ export const ExpensesView: React.FC = () => {
             onClick={() => setActiveTab('categories')}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
               activeTab === 'categories'
-                ? 'bg-[#0A0A0A] text-[#D4AF37] shadow-sm'
+                ? 'bg-[#0B2559] text-[#D4AF37] shadow-sm'
                 : 'text-gray-700 hover:text-black'
             }`}
           >
@@ -233,7 +233,7 @@ export const ExpensesView: React.FC = () => {
                     <TrendingDown size={13} />
                   </div>
                 </div>
-                <div className="text-base sm:text-lg font-black text-[#0A0A0A] tracking-tight">
+                <div className="text-base sm:text-lg font-black text-[#0B2559] tracking-tight">
                   {formatCurrencyValue(kpi.value)}
                 </div>
               </div>
@@ -255,7 +255,7 @@ export const ExpensesView: React.FC = () => {
                         setFromDate(e.target.value)
                         setActivePreset('all')
                       }}
-                      className="h-10 pl-8 pr-2.5 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                      className="h-10 pl-8 pr-2.5 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                     />
                     <Calendar size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                   </div>
@@ -268,7 +268,7 @@ export const ExpensesView: React.FC = () => {
                         setToDate(e.target.value)
                         setActivePreset('all')
                       }}
-                      className="h-10 pl-8 pr-2.5 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A]"
+                      className="h-10 pl-8 pr-2.5 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559]"
                     />
                     <Calendar size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                   </div>
@@ -283,7 +283,7 @@ export const ExpensesView: React.FC = () => {
                       onClick={() => applyDatePreset(p)}
                       className={`px-3 py-1.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
                         activePreset === p
-                          ? 'bg-[#0A0A0A] text-[#D4AF37] shadow-xs'
+                          ? 'bg-[#0B2559] text-[#D4AF37] shadow-xs'
                           : 'text-gray-600 hover:text-black'
                       }`}
                     >
@@ -315,7 +315,7 @@ export const ExpensesView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsRecordModalOpen(true)}
-                  className="h-10 px-4 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] text-xs font-bold hover:bg-[#1A1A1A] transition-all shadow-md flex items-center gap-2 cursor-pointer"
+                  className="h-10 px-4 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] text-xs font-bold hover:bg-[#164AAB] transition-all shadow-md flex items-center gap-2 cursor-pointer"
                 >
                   <Plus size={15} /> Record Expense
                 </button>
@@ -330,7 +330,7 @@ export const ExpensesView: React.FC = () => {
                   <select
                     value={selectedCategoryId}
                     onChange={(e) => setSelectedCategoryId(e.target.value)}
-                    className="w-full h-10 pl-9 pr-8 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A] cursor-pointer appearance-none"
+                    className="w-full h-10 pl-9 pr-8 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559] cursor-pointer appearance-none"
                   >
                     <option value="all">All Categories</option>
                     {categories.map((cat) => (
@@ -354,7 +354,7 @@ export const ExpensesView: React.FC = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search by description, category, staff name, or amount..."
-                    className="w-full h-10 pl-9 pr-9 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-medium text-gray-900 outline-none focus:border-[#0A0A0A]"
+                    className="w-full h-10 pl-9 pr-9 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-medium text-gray-900 outline-none focus:border-[#0B2559]"
                   />
                   <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                   {searchQuery && (
@@ -440,14 +440,14 @@ export const ExpensesView: React.FC = () => {
                           {exp.expense_date}
                         </td>
                         <td className="px-5 py-3.5">
-                          <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[#FBFAF6] text-[#0A0A0A] border border-[#E8D399]">
+                          <span className="inline-flex items-center px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[#FBFAF6] text-[#0B2559] border border-[#E8D399]">
                             {exp.category_name}
                           </span>
                         </td>
                         <td className="px-5 py-3.5 text-gray-700 max-w-[280px] truncate">
                           {exp.description || '—'}
                         </td>
-                        <td className="px-5 py-3.5 text-right font-black text-sm text-[#0A0A0A] whitespace-nowrap">
+                        <td className="px-5 py-3.5 text-right font-black text-sm text-[#0B2559] whitespace-nowrap">
                           {formatCurrencyValue(exp.amount)}
                         </td>
                         <td className="px-5 py-3.5 text-right whitespace-nowrap">

@@ -53,14 +53,14 @@ export const BarcodeLabel: React.FC<BarcodeLabelProps> = ({
     >
       {/* Brand & Product Header */}
       <div className="w-full">
-        <div className="text-[9px] font-black tracking-widest text-[#0A0A0A] uppercase truncate leading-none">
+        <div className="text-[9px] font-black tracking-widest text-[#0B2559] uppercase truncate leading-none">
           {storeName}
         </div>
         <div className="text-[10px] font-bold text-gray-900 truncate mt-0.5 leading-tight">
           {productName}
         </div>
         {variantName && (
-          <div className="text-[9px] font-extrabold text-[#0A0A0A] bg-amber-50 px-1 py-0.5 rounded border border-amber-200 inline-block mt-0.5 leading-none">
+          <div className="text-[9px] font-extrabold text-[#0B2559] bg-amber-50 px-1 py-0.5 rounded border border-amber-200 inline-block mt-0.5 leading-none">
             {variantName}
           </div>
         )}

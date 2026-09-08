@@ -137,12 +137,12 @@ export default function VariantSelectormodal({
               </div>
 
               <div className="flex-1 min-w-0">
-                <h3 className="text-[14px] font-black text-[#111111] leading-tight line-clamp-1">
+                <h3 className="text-[14px] font-black text-[#0F172A] leading-tight line-clamp-1">
                   {product.name}
                 </h3>
                 {selected && (
                   <div className="mt-0.5 flex items-baseline gap-1.5">
-                    <span className="text-[15px] font-black text-[#111111] tabular-nums">
+                    <span className="text-[15px] font-black text-[#0F172A] tabular-nums">
                       {formatCurrency(selected.price)}
                     </span>
                     {selected.sizeLabel && (
@@ -192,7 +192,7 @@ export default function VariantSelectormodal({
                       className={[
                         'flex w-full items-center gap-3 rounded-xl px-3.5 py-3 text-left transition-all',
                         isSelected
-                          ? 'bg-[#111111]/6 ring-2 ring-[#111111]'
+                          ? 'bg-[#0F172A]/6 ring-2 ring-[#0F172A]'
                           : outOfStock
                           ? 'cursor-not-allowed opacity-45 ring-1 ring-gray-200'
                           : 'ring-1 ring-gray-200 hover:ring-[#D4AF37] active:bg-gray-50',
@@ -203,7 +203,7 @@ export default function VariantSelectormodal({
                         className={[
                           'flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2',
                           isSelected
-                            ? 'border-[#111111] bg-[#111111]'
+                            ? 'border-[#0F172A] bg-[#0F172A]'
                             : 'border-gray-300 bg-white',
                         ].join(' ')}
                       >
@@ -214,7 +214,7 @@ export default function VariantSelectormodal({
                       <div className="flex-1 min-w-0">
                         <p
                           className={`text-[13px] font-semibold leading-tight ${
-                            isSelected ? 'text-[#111111]' : 'text-[#333]'
+                            isSelected ? 'text-[#0F172A]' : 'text-[#333]'
                           }`}
                         >
                           {v.variantName}
@@ -232,7 +232,7 @@ export default function VariantSelectormodal({
                       {/* Price — right aligned */}
                       <span
                         className={`text-[14px] font-black shrink-0 tabular-nums ${
-                          isSelected ? 'text-[#111111]' : 'text-[#444]'
+                          isSelected ? 'text-[#0F172A]' : 'text-[#444]'
                         }`}
                       >
                         {formatCurrency(v.price)}
@@ -255,19 +255,19 @@ export default function VariantSelectormodal({
                     type="button"
                     onClick={() => setQty((q) => Math.max(1, q - 1))}
                     disabled={qty <= 1}
-                    className="flex h-11 w-11 items-center justify-center text-[#111111] transition-colors hover:bg-[#E8EDE4] disabled:opacity-40"
+                    className="flex h-11 w-11 items-center justify-center text-[#0F172A] transition-colors hover:bg-[#E8EDE4] disabled:opacity-40"
                     aria-label="Decrease"
                   >
                     <Minus size={14} />
                   </button>
-                  <span className="w-10 text-center text-[15px] font-black text-[#111111] tabular-nums">
+                  <span className="w-10 text-center text-[15px] font-black text-[#0F172A] tabular-nums">
                     {qty}
                   </span>
                   <button
                     type="button"
                     onClick={() => setQty((q) => q + 1)}
                     disabled={selected ? qty >= selected.stock : true}
-                    className="flex h-11 w-11 items-center justify-center text-[#111111] transition-colors hover:bg-[#E8EDE4] disabled:opacity-40"
+                    className="flex h-11 w-11 items-center justify-center text-[#0F172A] transition-colors hover:bg-[#E8EDE4] disabled:opacity-40"
                     aria-label="Increase"
                   >
                     <Plus size={14} />
@@ -286,7 +286,7 @@ export default function VariantSelectormodal({
                       ? 'bg-emerald-500 text-white'
                       : !haGSTock
                       ? 'cursor-not-allowed bg-gray-200 text-gray-400'
-                      : 'bg-[#111111] text-white hover:bg-[#1e2817]',
+                      : 'bg-[#0F172A] text-white hover:bg-[#0B2559]',
                   ].join(' ')}
                 >
                   {added ? (

@@ -84,7 +84,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                     name="printerType"
                     checked={settings.printerType === 'label'}
                     onChange={() => handlePrinterChange('label')}
-                    className="accent-[#0A0A0A] w-4 h-4 cursor-pointer"
+                    className="accent-[#0B2559] w-4 h-4 cursor-pointer"
                   />
                   Label Printer (Thermal)
                 </label>
@@ -94,7 +94,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                     name="printerType"
                     checked={settings.printerType === 'regular'}
                     onChange={() => handlePrinterChange('regular')}
-                    className="accent-[#0A0A0A] w-4 h-4 cursor-pointer"
+                    className="accent-[#0B2559] w-4 h-4 cursor-pointer"
                   />
                   Regular Printer (A4 Sheet)
                 </label>
@@ -123,12 +123,12 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                         name="labelSize"
                         checked={settings.selectedSizeId === size.id}
                         onChange={() => handleSizeChange(size.id)}
-                        className="accent-[#0A0A0A] w-4 h-4 cursor-pointer"
+                        className="accent-[#0B2559] w-4 h-4 cursor-pointer"
                       />
                       <span>{size.name}</span>
                     </div>
                     {size.isCustom && (
-                      <span className="text-[9px] font-black uppercase tracking-wider bg-[#0A0A0A] text-[#D4AF37] px-1.5 py-0.5 rounded">
+                      <span className="text-[9px] font-black uppercase tracking-wider bg-[#0B2559] text-[#D4AF37] px-1.5 py-0.5 rounded">
                         Custom
                       </span>
                     )}
@@ -159,7 +159,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                     type="checkbox"
                     checked={settings.showSalePrice}
                     onChange={() => handleFieldToggle('showSalePrice')}
-                    className="accent-[#0A0A0A] w-4 h-4 rounded cursor-pointer"
+                    className="accent-[#0B2559] w-4 h-4 rounded cursor-pointer"
                   />
                   Sale Price (₹)
                 </label>
@@ -177,7 +177,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                     type="checkbox"
                     checked={settings.showItemName}
                     onChange={() => handleFieldToggle('showItemName')}
-                    className="accent-[#0A0A0A] w-4 h-4 rounded cursor-pointer"
+                    className="accent-[#0B2559] w-4 h-4 rounded cursor-pointer"
                   />
                   Item Name
                 </label>
@@ -186,7 +186,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                     type="checkbox"
                     checked={settings.showDiscount}
                     onChange={() => handleFieldToggle('showDiscount')}
-                    className="accent-[#0A0A0A] w-4 h-4 rounded cursor-pointer"
+                    className="accent-[#0B2559] w-4 h-4 rounded cursor-pointer"
                   />
                   Discount / MRP
                 </label>
@@ -199,7 +199,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="w-full py-2.5 rounded-xl bg-[#0A0A0A] text-[#D4AF37] border border-[#D4AF37] font-black text-xs uppercase tracking-wider hover:bg-[#1A1A1A] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+              className="w-full py-2.5 rounded-xl bg-[#0B2559] text-[#D4AF37] border border-[#D4AF37] font-black text-xs uppercase tracking-wider hover:bg-[#164AAB] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <Check size={14} /> Done
             </button>

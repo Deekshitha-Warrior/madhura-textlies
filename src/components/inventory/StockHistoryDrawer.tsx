@@ -69,9 +69,9 @@ export const StockHistoryDrawer: React.FC<StockHistoryDrawerProps> = ({
     <div className="fixed inset-0 z-50 overflow-hidden bg-black/60 backdrop-blur-xs flex justify-end">
       <div className="bg-white w-full max-w-md h-full shadow-2xl flex flex-col animate-in slide-in-from-right duration-200 border-l border-[#E8D399]">
         {/* Header */}
-        <div className="bg-[#0A0A0A] p-5 border-b border-[#D4AF37]/30 flex items-center justify-between text-white">
+        <div className="bg-[#0B2559] p-5 border-b border-[#D4AF37]/30 flex items-center justify-between text-white">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-[#1A1A1A] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
+            <div className="w-9 h-9 rounded-xl bg-[#164AAB] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
               <History size={18} />
             </div>
             <div>
@@ -112,7 +112,7 @@ export const StockHistoryDrawer: React.FC<StockHistoryDrawerProps> = ({
         <div className="flex-1 overflow-y-auto p-4 space-y-3">
           {loading ? (
             <div className="py-12 text-center text-gray-500 text-sm flex flex-col items-center gap-2">
-              <RefreshCw size={20} className="animate-spin text-[#0A0A0A]" />
+              <RefreshCw size={20} className="animate-spin text-[#0B2559]" />
               Loading audit movements...
             </div>
           ) : error ? (

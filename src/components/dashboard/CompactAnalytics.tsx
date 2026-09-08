@@ -50,7 +50,7 @@ function TooltipCard({ active, payload, label, currency = false }: {
   )
 }
 
-const chartAxis = { fill: '#6B7661', fontSize: 11 }
+const chartAxis = { fill: '#475569', fontSize: 11 }
 
 export default function CompactAnalytics({ analytics }: CompactAnalyticsProps) {
   return (
@@ -62,7 +62,7 @@ export default function CompactAnalytics({ analytics }: CompactAnalyticsProps) {
               <h3 className="text-[15px] font-black text-[#223126]">Revenue Trend</h3>
               <p className="text-[11px] text-[#7A846F] mt-1">Completed revenue only</p>
             </div>
-            <div className="inline-flex items-center gap-1 rounded-full bg-[#F7F8F4] px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#6B7661]">
+            <div className="inline-flex items-center gap-1 rounded-full bg-[#F7F8F4] px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#475569]">
               <Sparkles size={12} className="text-[#D4AF37]" /> Premium
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function CompactAnalytics({ analytics }: CompactAnalyticsProps) {
       <details className="group rounded-2xl border border-[#E7DED0] bg-white/80 backdrop-blur-sm px-4 py-3 shadow-[0_10px_24px_rgba(34,49,38,0.04)]">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-[14px] font-black text-[#223126]">
           <span>More insights</span>
-          <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#6B7661] group-open:text-[#111111]">
+          <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#475569] group-open:text-[#0F172A]">
             Expand <ChevronDown size={12} className="transition-transform group-open:rotate-180" />
           </span>
         </summary>

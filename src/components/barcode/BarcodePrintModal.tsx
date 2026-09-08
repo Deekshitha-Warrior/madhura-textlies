@@ -217,9 +217,9 @@ export const BarcodePrintModal: React.FC<BarcodePrintModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-xs p-3 sm:p-4 animate-in fade-in duration-150">
       <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] border border-[#E8D399] shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-150">
         {/* Header */}
-        <div className="bg-[#0A0A0A] px-5 py-3.5 sm:px-6 sm:py-4 border-b border-[#D4AF37]/30 flex items-center justify-between text-white shrink-0">
+        <div className="bg-[#0B2559] px-5 py-3.5 sm:px-6 sm:py-4 border-b border-[#D4AF37]/30 flex items-center justify-between text-white shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#1A1A1A] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#164AAB] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
               <Printer size={16} />
             </div>
             <div>
@@ -247,7 +247,7 @@ export const BarcodePrintModal: React.FC<BarcodePrintModalProps> = ({
               <span className="text-[10px] font-black uppercase tracking-wider text-[#B48811]">
                 Product / SKU
               </span>
-              <h3 className="text-lg font-black text-[#0A0A0A]">{productName}</h3>
+              <h3 className="text-lg font-black text-[#0B2559]">{productName}</h3>
               {variantName && (
                 <div className="mt-1 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold">
                   Variant: {variantName}
@@ -289,7 +289,7 @@ export const BarcodePrintModal: React.FC<BarcodePrintModalProps> = ({
                   max="500"
                   value={quantity}
                   onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                  className="flex-1 text-center font-black text-lg py-2 rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] focus:border-[#0A0A0A] focus:bg-white outline-none"
+                  className="flex-1 text-center font-black text-lg py-2 rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] focus:border-[#0B2559] focus:bg-white outline-none"
                 />
                 <button
                   type="button"
@@ -314,7 +314,7 @@ export const BarcodePrintModal: React.FC<BarcodePrintModalProps> = ({
                   const preset = LABEL_PRESETS.find((p) => p.name === e.target.value)
                   if (preset) setSelectedPreset(preset)
                 }}
-                className="w-full py-2.5 px-3 rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] font-bold text-sm text-gray-900 outline-none focus:border-[#0A0A0A] focus:bg-white"
+                className="w-full py-2.5 px-3 rounded-xl border-2 border-[#E8D399] bg-[#FBFAF6] font-bold text-sm text-gray-900 outline-none focus:border-[#0B2559] focus:bg-white"
               >
                 {LABEL_PRESETS.map((p) => (
                   <option key={p.name} value={p.name}>
@@ -357,7 +357,7 @@ export const BarcodePrintModal: React.FC<BarcodePrintModalProps> = ({
           <button
             type="button"
             onClick={handlePrint}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] font-black hover:bg-[#1A1A1A] transition-all shadow-md cursor-pointer hover:scale-[1.02]"
+            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] font-black hover:bg-[#164AAB] transition-all shadow-md cursor-pointer hover:scale-[1.02]"
           >
             <Printer size={16} />
             Print {quantity} {quantity === 1 ? 'Sticker' : 'Stickers'}

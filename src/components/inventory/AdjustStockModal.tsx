@@ -133,9 +133,9 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-3 sm:p-4 overflow-hidden">
       <div className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full max-h-[92vh] border border-[#E8D399] shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="shrink-0 bg-[#0A0A0A] px-5 py-3.5 border-b border-[#D4AF37]/30 flex items-center justify-between text-white">
+        <div className="shrink-0 bg-[#0B2559] px-5 py-3.5 border-b border-[#D4AF37]/30 flex items-center justify-between text-white">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-[#1A1A1A] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
+            <div className="w-8 h-8 rounded-lg bg-[#164AAB] border border-[#D4AF37] flex items-center justify-center text-[#D4AF37]">
               <SlidersHorizontal size={16} />
             </div>
             <div>
@@ -501,7 +501,7 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
                 }
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
-                className="w-full py-2 px-3 rounded-xl border border-gray-300 bg-white text-xs text-gray-900 outline-none focus:border-[#0A0A0A]"
+                className="w-full py-2 px-3 rounded-xl border border-gray-300 bg-white text-xs text-gray-900 outline-none focus:border-[#0B2559]"
               />
             </div>
           </div>
@@ -520,10 +520,10 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
               disabled={submitting || delta === 0}
               className={`flex items-center gap-1.5 px-5 py-2 rounded-xl text-xs font-black transition-all shadow-md disabled:opacity-50 cursor-pointer ${
                 mode === 'RESTOCK'
-                  ? 'bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#1A1A1A]'
+                  ? 'bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#164AAB]'
                   : mode === 'REMOVE'
                   ? 'bg-rose-700 text-white hover:bg-rose-800 border border-rose-800'
-                  : 'bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#1A1A1A]'
+                  : 'bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] hover:bg-[#164AAB]'
               }`}
             >
               {submitting ? (

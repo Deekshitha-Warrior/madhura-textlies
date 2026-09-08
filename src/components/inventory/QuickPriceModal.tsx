@@ -79,7 +79,7 @@ export const QuickPriceModal: React.FC<Props> = ({ isOpen, item, onClose, onSucc
               <Tag className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-bold text-sm text-[#111111]">Quick Edit Price</h3>
+              <h3 className="font-bold text-sm text-[#0F172A]">Quick Edit Price</h3>
               <p className="text-[11px] text-gray-500 font-medium">
                 Barcode is linked — changing price updates live POS instantly
               </p>
@@ -141,7 +141,7 @@ export const QuickPriceModal: React.FC<Props> = ({ isOpen, item, onClose, onSucc
                 value={sellingPrice}
                 onChange={(e) => setSellingPrice(e.target.value)}
                 placeholder="0.00"
-                className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-black text-gray-900 focus:outline-none focus:border-[#0A0A0A] transition-colors"
+                className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-black text-gray-900 focus:outline-none focus:border-[#0B2559] transition-colors"
               />
             </div>
             <p className="text-[10px] text-gray-400 font-medium mt-1">
@@ -164,7 +164,7 @@ export const QuickPriceModal: React.FC<Props> = ({ isOpen, item, onClose, onSucc
                 value={costPrice}
                 onChange={(e) => setCostPrice(e.target.value)}
                 placeholder="0.00"
-                className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-semibold text-gray-900 focus:outline-none focus:border-[#0A0A0A] transition-colors"
+                className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-semibold text-gray-900 focus:outline-none focus:border-[#0B2559] transition-colors"
               />
             </div>
           </div>
@@ -181,7 +181,7 @@ export const QuickPriceModal: React.FC<Props> = ({ isOpen, item, onClose, onSucc
             <button
               type="submit"
               disabled={loading}
-              className="h-9 px-4 text-xs font-bold rounded-xl bg-[#0A0A0A] text-[#D4AF37] border border-[#D4AF37] hover:bg-[#1A1A1A] transition-all shadow-xs disabled:opacity-50 flex items-center gap-1.5 cursor-pointer"
+              className="h-9 px-4 text-xs font-bold rounded-xl bg-[#0B2559] text-[#D4AF37] border border-[#D4AF37] hover:bg-[#164AAB] transition-all shadow-xs disabled:opacity-50 flex items-center gap-1.5 cursor-pointer"
             >
               {loading ? (
                 <>

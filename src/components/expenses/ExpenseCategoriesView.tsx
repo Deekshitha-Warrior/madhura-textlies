@@ -93,14 +93,14 @@ export const ExpenseCategoriesView: React.FC<ExpenseCategoriesViewProps> = ({
                 placeholder="e.g. Utility Bills, Packaging"
                 value={newCatName}
                 onChange={(e) => setNewCatName(e.target.value)}
-                className="w-full h-11 px-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0A0A0A] focus:bg-white transition-all"
+                className="w-full h-11 px-3 rounded-xl border border-gray-300 bg-[#FAFAFA] text-xs font-bold text-gray-900 outline-none focus:border-[#0B2559] focus:bg-white transition-all"
               />
             </div>
 
             <button
               type="submit"
               disabled={loading || !newCatName.trim()}
-              className="w-full h-11 rounded-xl bg-[#0A0A0A] border border-[#D4AF37] text-[#D4AF37] text-xs font-bold hover:bg-[#1A1A1A] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+              className="w-full h-11 rounded-xl bg-[#0B2559] border border-[#D4AF37] text-[#D4AF37] text-xs font-bold hover:bg-[#164AAB] transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             >
               <Plus size={14} /> {loading ? 'Adding...' : 'Add Category'}
             </button>

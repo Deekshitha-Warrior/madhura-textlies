@@ -35,7 +35,7 @@ export default function InsideOurStore() {
           <p className="text-[10px] font-black uppercase tracking-[0.26em] text-[#D4AF37] mb-3">
             A Glimpse of Our Tradition
           </p>
-          <h2 className="text-[2rem] sm:text-[2.6rem] font-black text-[#111111] tracking-tight leading-[1.05] mb-4">
+          <h2 className="text-[2rem] sm:text-[2.6rem] font-black text-[#0F172A] tracking-tight leading-[1.05] mb-4">
             Inside Our Store
           </h2>
           <p className="text-[15px] text-[#374151] font-medium leading-[1.7] max-w-lg mx-auto">
@@ -64,7 +64,7 @@ export default function InsideOurStore() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: 0.06, ease: EASE }}
-              className="hidden lg:block text-[2.6rem] xl:text-[3rem] font-black text-[#111111] tracking-tight leading-[1.03] mb-5"
+              className="hidden lg:block text-[2.6rem] xl:text-[3rem] font-black text-[#0F172A] tracking-tight leading-[1.03] mb-5"
             >
               Inside Our Store
             </motion.h2>
@@ -90,10 +90,10 @@ export default function InsideOurStore() {
             >
               {TRUST_BADGES.map((badge) => (
                 <li key={badge} className="flex items-center gap-3">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#111111] flex items-center justify-center">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0F172A] flex items-center justify-center">
                     <Check size={11} strokeWidth={3} className="text-white" />
                   </span>
-                  <span className="text-[14px] font-semibold text-[#111111]">{badge}</span>
+                  <span className="text-[14px] font-semibold text-[#0F172A]">{badge}</span>
                 </li>
               ))}
             </motion.ul>
@@ -109,10 +109,10 @@ export default function InsideOurStore() {
                 to="/gallery"
                 className="group inline-flex items-center gap-2.5
                   px-7 py-3.5
-                  bg-[#111111] text-white font-bold rounded-full
+                  bg-[#0F172A] text-white font-bold rounded-full
                   text-[13px] xl:text-[14px]
                   shadow-[0_4px_22px_rgba(44,57,42,0.28)]
-                  hover:bg-[#1e2817]
+                  hover:bg-[#0B2559]
                   hover:shadow-[0_8px_32px_rgba(44,57,42,0.38)]
                   hover:-translate-y-px
                   transition-all duration-200"
@@ -226,7 +226,7 @@ export default function InsideOurStore() {
                 <Link
                   to="/gallery"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full
-                    bg-[#111111] text-white font-bold text-[13px]
+                    bg-[#0F172A] text-white font-bold text-[13px]
                     shadow-[0_4px_18px_rgba(44,57,42,0.25)]"
                 >
                   View Complete Gallery <ArrowRight size={14} />

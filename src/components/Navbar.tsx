@@ -91,10 +91,10 @@ export default function Navbar() {
             <button
               onClick={() => setLang(lang === 'en' ? 'ta' : 'en')}
               title="Switch language / மொழி மாற்று"
-              className="flex items-center rounded-full bg-[#F9FAFB] border border-sand/60 px-1 py-0.5 text-[10px] font-black text-[#111111] shrink-0 mr-0.5"
+              className="flex items-center rounded-full bg-[#F9FAFB] border border-sand/60 px-1 py-0.5 text-[10px] font-black text-[#0F172A] shrink-0 mr-0.5"
             >
-              <span className={`px-1.5 py-0.5 rounded-full transition-colors ${lang === 'en' ? 'bg-[#111111] text-white' : 'text-[#374151]'}`}>EN</span>
-              <span className={`px-1.5 py-0.5 rounded-full transition-colors ${lang === 'ta' ? 'bg-[#111111] text-white' : 'text-[#374151]'}`}>த</span>
+              <span className={`px-1.5 py-0.5 rounded-full transition-colors ${lang === 'en' ? 'bg-[#0F172A] text-white' : 'text-[#374151]'}`}>EN</span>
+              <span className={`px-1.5 py-0.5 rounded-full transition-colors ${lang === 'ta' ? 'bg-[#0F172A] text-white' : 'text-[#374151]'}`}>த</span>
             </button>
             <motion.button whileTap={{ scale: 0.88 }} onClick={() => setShowFav(true)} className="relative rounded-full hover:bg-sage/20 transition-colors touch-target">
               <Heart size={18} className="text-textMuted sm:size-[20px]" />
