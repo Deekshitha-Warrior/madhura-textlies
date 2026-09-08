@@ -2964,21 +2964,21 @@ export default function Dashboard() {
 
         {/* ── ORDER MANAGEMENT ── */}
         {tab === 'history' && (
-          <div className="space-y-4 sm:space-y-6 rounded-[20px] sm:rounded-[28px] border border-[#E5E7EB]/60 bg-[#FBFAF6] p-3 sm:p-6 lg:p-7 shadow-sm">
-            <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="space-y-3 sm:space-y-6 rounded-[20px] sm:rounded-[28px] border border-[#E5E7EB]/60 bg-[#FBFAF6] p-2.5 sm:p-6 lg:p-7 shadow-sm">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#10B981]">{l('Billing history', 'பில் வரலாறு')}</p>
-                <h2 className="mt-1 text-xl font-black text-[#0F172A]">{l('Order Management', 'ஆர்டர் மேலாண்மை')} <span className="text-[11px] font-semibold text-[#374151]">({l('POS Bills only', 'POS பில்கள் மட்டுமே')})</span></h2>
+                <h2 className="mt-1 text-lg sm:text-xl font-black text-[#0F172A]">{l('Order Management', 'ஆர்டர் மேலாண்மை')} <span className="text-[10px] font-semibold text-[#374151]">({l('POS Bills only', 'POS பில்கள் மட்டுமே')})</span></h2>
               </div>
               <div className="flex gap-2">
-                <Link to="/pos" className="inline-flex items-center gap-2 rounded-xl bg-[#0F172A] px-4 py-2 text-[13px] font-bold text-white shadow-sm hover:bg-[#1f281d]">
+                <Link to="/pos" className="inline-flex items-center gap-1.5 rounded-xl bg-[#0F172A] px-3 py-2 text-[12px] font-bold text-white shadow-sm hover:bg-[#1f281d]">
                   <ShoppingCart size={14} /> Open POS
                 </Link>
               </div>
             </div>
-            <div className="rounded-2xl border border-[#E5E7EB]/60 bg-white p-3 sm:p-6 shadow-sm">
+            <div className="rounded-2xl border border-[#E5E7EB]/60 bg-white p-2.5 sm:p-6 shadow-sm">
               {/* Bill type filter */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="mb-2.5 flex gap-1.5 overflow-x-auto pb-0.5 sm:mb-4 sm:gap-2">
                 {([
                   { v: 'all',     l: l('All Bills', 'அனைத்து') },
                   { v: 'offline', l: l('Offline', 'ஆஃப்லைன்') },
@@ -2986,30 +2986,30 @@ export default function Dashboard() {
                   { v: 'manual',  l: l('Manual', 'கைமுறை') },
                 ] as const).map(({ v, l }) => (
                   <button key={v} type="button" onClick={() => setBillTypeFilter(v)}
-                    className={`min-h-[44px] px-3 py-1.5 rounded-xl text-[12px] font-black transition-colors ${billTypeFilter === v ? 'bg-[#0F172A] text-white shadow-sm' : 'bg-[#F9FAFB] text-[#374151] hover:bg-[#E5E7EB]/40'}`}>
+                    className={`min-h-[38px] shrink-0 rounded-lg px-2.5 py-1 text-[11px] font-black transition-colors sm:min-h-[44px] sm:rounded-xl sm:px-3 sm:py-1.5 sm:text-[12px] ${billTypeFilter === v ? 'bg-[#0F172A] text-white shadow-sm' : 'bg-[#F9FAFB] text-[#374151] hover:bg-[#E5E7EB]/40'}`}>
                     {l}
                   </button>
                 ))}
               </div>
-              <form onSubmit={runSearch} className="space-y-3 mb-4">
-                <div className="flex flex-wrap gap-2 items-center">
+              <form onSubmit={runSearch} className="mb-3 space-y-2 sm:mb-4 sm:space-y-3">
+                <div className="grid grid-cols-4 gap-1.5 sm:flex sm:flex-wrap sm:items-center sm:gap-2">
                   {(['today', 'week', 'month', 'custom'] as const).map(preset => (
                     <button key={preset} type="button" onClick={() => applyDatePreset(preset)}
-                      className={`min-h-[44px] px-3 py-1.5 rounded-xl text-[12px] font-black transition-colors ${datePreset === preset ? 'bg-[#D4AF37] text-white shadow-sm' : 'bg-[#F9FAFB] text-[#374151] hover:bg-[#E5E7EB]/40'}`}>
+                      className={`min-h-[38px] px-1.5 py-1 rounded-lg text-[10px] font-black transition-colors sm:min-h-[44px] sm:rounded-xl sm:px-3 sm:py-1.5 sm:text-[12px] ${datePreset === preset ? 'bg-[#D4AF37] text-white shadow-sm' : 'bg-[#F9FAFB] text-[#374151] hover:bg-[#E5E7EB]/40'}`}>
                       {preset === 'today' ? l('Today','இன்று') : preset === 'week' ? l('This Week','இந்த வாரம்') : preset === 'month' ? l('This Month','இந்த மாதம்') : l('Custom Range','தேர்வு')}
                     </button>
                   ))}
                   {(search.dateFrom || search.dateTo || datePreset) && (
                     <button type="button" onClick={() => { setDatePreset(''); setSearch(s => ({ ...s, dateFrom: '', dateTo: '' })) }}
-                      className="min-h-[44px] px-3 py-1.5 rounded-xl text-[12px] font-black text-[#D4AF37] hover:bg-[#D4AF37]/5">{l('Clear Dates', 'தேதி அழி')}</button>
+                      className="col-span-4 min-h-[30px] px-2 py-1 text-left text-[10px] font-black text-[#D4AF37] hover:bg-[#D4AF37]/5 sm:col-span-1 sm:min-h-[44px] sm:rounded-xl sm:px-3 sm:py-1.5 sm:text-[12px]">{l('Clear Dates', 'தேதி அழி')}</button>
                   )}
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                  <input className="min-h-[48px] rounded-xl bg-[#F9FAFB] px-3 py-2.5 text-[16px] md:text-[13px] font-semibold text-[#0F172A] placeholder:text-[#8A9384] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/15" placeholder={l('Invoice / Bill No', 'பில் எண்')}
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-4 sm:gap-3">
+                  <input className="col-span-2 min-h-[42px] rounded-xl bg-[#F9FAFB] px-3 py-2 text-[14px] font-semibold text-[#0F172A] placeholder:text-[#8A9384] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/15 sm:min-h-[48px] sm:py-2.5 sm:text-[16px] md:text-[13px] lg:col-span-1" placeholder={l('Invoice / Bill No', 'பில் எண்')}
                     value={search.invoiceNo} onChange={e => setSearch(s => ({ ...s, invoiceNo: e.target.value }))} />
-                  <input className="min-h-[48px] rounded-xl bg-[#F9FAFB] px-3 py-2.5 text-[16px] md:text-[13px] font-semibold text-[#0F172A] placeholder:text-[#8A9384] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/15" placeholder={l('Customer Name', 'வாடிக்கையாளர் பெயர்')}
+                  <input className="min-h-[42px] rounded-xl bg-[#F9FAFB] px-3 py-2 text-[14px] font-semibold text-[#0F172A] placeholder:text-[#8A9384] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/15 sm:min-h-[48px] sm:py-2.5 sm:text-[16px] md:text-[13px]" placeholder={l('Customer Name', 'வாடிக்கையாளர் பெயர்')}
                     value={search.customerName} onChange={e => setSearch(s => ({ ...s, customerName: e.target.value }))} />
-                  <input className="min-h-[48px] rounded-xl bg-[#F9FAFB] px-3 py-2.5 text-[16px] md:text-[13px] font-semibold text-[#0F172A] placeholder:text-[#8A9384] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/15" placeholder={l('Mobile Number', 'மொபைல் எண்')}
+                  <input className="min-h-[42px] rounded-xl bg-[#F9FAFB] px-3 py-2 text-[14px] font-semibold text-[#0F172A] placeholder:text-[#8A9384] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/15 sm:min-h-[48px] sm:py-2.5 sm:text-[16px] md:text-[13px]" placeholder={l('Mobile Number', 'மொபைல் எண்')}
                     value={search.phone} onChange={e => setSearch(s => ({ ...s, phone: e.target.value }))} />
                   {datePreset === 'custom' ? (
                     <>
