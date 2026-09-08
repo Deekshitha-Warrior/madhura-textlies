@@ -54,7 +54,7 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
       <div className="fixed inset-0 z-[110] flex justify-end bg-black/50 backdrop-blur-xs animate-in fade-in duration-150">
         <div className="w-full max-w-sm bg-white h-full shadow-2xl flex flex-col border-l border-gray-200 animate-in slide-in-from-right duration-200">
           {/* Header */}
-          <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-[#0A0A0A] text-white">
+          <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-[#0B2559] text-white">
             <h3 className="text-sm font-black tracking-wide text-white">Barcode Settings</h3>
             <button
               type="button"
@@ -164,13 +164,13 @@ export const BarcodeSettingsDrawer: React.FC<BarcodeSettingsDrawerProps> = ({
                   Sale Price (₹)
                 </label>
                 <label className="flex items-center gap-2.5 text-xs font-bold text-gray-700 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={settings.showCompanyName}
-                    onChange={() => handleFieldToggle('showCompanyName')}
-                    className="accent-[#0A0A0A] w-4 h-4 rounded cursor-pointer"
-                  />
-                  Company Name (CLAD)
+                      <input
+                        type="checkbox"
+                        checked={settings.showCompanyName}
+                        onChange={() => handleFieldToggle('showCompanyName')}
+                        className="accent-[#0B2559] w-4 h-4 rounded cursor-pointer"
+                      />
+                  Company Name (Madhura Tex)
                 </label>
                 <label className="flex items-center gap-2.5 text-xs font-bold text-gray-700 cursor-pointer">
                   <input

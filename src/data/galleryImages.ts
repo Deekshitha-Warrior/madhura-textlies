@@ -13,7 +13,7 @@ export const galleryImages: GalleryImage[] = [
   {
     id: 1,
     title: 'Our Store',
-    description: 'CLAD in Manapparai, Trichy',
+    description: 'Madhura Tex — Manapparai, Trichy',
     image: BASE + 'WhatsApp Image 2026-06-06 at 7.55.33 AM.jpeg',
     tags: ['store', 'front', 'heritage'],
   },

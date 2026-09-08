@@ -35,8 +35,8 @@ export const DEFAULT_BARCODE_SETTINGS: BarcodeSettings = {
   showDiscount: false,
 }
 
-const SETTINGS_KEY = 'clad_barcode_settings'
-const CUSTOM_SIZES_KEY = 'clad_custom_label_sizes'
+const SETTINGS_KEY = 'mtx_barcode_settings'
+const CUSTOM_SIZES_KEY = 'mtx_custom_label_sizes'
 
 export function getStoredBarcodeSettings(): BarcodeSettings {
   try {

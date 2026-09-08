@@ -1,5 +1,5 @@
 import React from 'react'
-import { BRAND_ADDRESS, BRAND_EMAIL, BRAND_EN, BRAND_INSTAGRAM, BRAND_PRIMARY_PHONE_DISPLAY } from '../lib/brand'
+import { BRAND_ADDRESS, BRAND_EMAIL, BRAND_EN, BRAND_INSTAGRAM, BRAND_LOGO, BRAND_PRIMARY_PHONE_DISPLAY } from '../lib/brand'
 import { formatCurrency, formatQuantityDisplay, normalizeStructuredOrderItem, formatInvoiceNo } from '../lib/retail'
 
 export interface InvoiceItem {
@@ -79,8 +79,8 @@ export const Invoice: React.FC<InvoiceProps> = ({
     >
       {/* ── HEADER ────────────────────────────────────────────────── */}
       <div style={{ textAlign: 'center', borderBottom: '1px solid #E8D399', paddingBottom: 20, marginBottom: 20 }}>
-        <div style={{ width: 44, height: 44, margin: '0 auto 12px auto', background: '#0A0A0A', borderRadius: 12, border: '1px solid #D4AF37', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(212,175,55,0.15)' }}>
-          <span style={{ fontFamily: "Cinzel, serif", fontSize: 22, fontWeight: 900, color: '#D4AF37' }}>C</span>
+        <div style={{ width: 44, height: 44, margin: '0 auto 12px auto', background: '#0B2559', borderRadius: 12, border: '1px solid #D4AF37', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(212,175,55,0.15)', overflow: 'hidden' }}>
+          <img src={BRAND_LOGO} alt={BRAND_EN} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
         <div style={{ fontSize: 24, fontWeight: 900, color: '#0A0A0A', letterSpacing: 2, textTransform: 'uppercase' }}>
           {BRAND_EN}
@@ -137,7 +137,7 @@ export const Invoice: React.FC<InvoiceProps> = ({
       <div className="w-full overflow-x-auto">
         <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: 320 }}>
           <thead>
-            <tr style={{ background: '#0A0A0A', borderRadius: 8 }}>
+            <tr style={{ background: '#0B2559', borderRadius: 8 }}>
               <th style={{ padding: '8px 10px', textAlign: 'left', fontSize: 10, fontWeight: 800, color: '#D4AF37', textTransform: 'uppercase', letterSpacing: 0.8, width: 28 }}>#</th>
               <th style={{ padding: '8px 10px', textAlign: 'left', fontSize: 10, fontWeight: 800, color: '#D4AF37', textTransform: 'uppercase', letterSpacing: 0.8 }}>Item / SKU</th>
               <th style={{ padding: '8px 10px', textAlign: 'center', fontSize: 10, fontWeight: 800, color: '#D4AF37', textTransform: 'uppercase', letterSpacing: 0.8, width: 45 }}>Qty</th>
@@ -226,7 +226,7 @@ export const Invoice: React.FC<InvoiceProps> = ({
           display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center',
         }}
       >
-        <div style={{ fontSize: 12, fontWeight: 800, color: '#0A0A0A' }}>Thank you for shopping at CLAD!</div>
+        <div style={{ fontSize: 12, fontWeight: 800, color: '#0A0A0A' }}>Thank you for shopping at {BRAND_EN}!</div>
         <div style={{ fontSize: 10, color: '#777', marginTop: 2 }}>Follow us on Instagram: @{BRAND_INSTAGRAM}</div>
         {onPrintReceipt && (
           <button

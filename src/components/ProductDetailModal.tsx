@@ -876,7 +876,7 @@ export default function ProductDetailModal({
                       <ChevronDown size={16} className="text-[#7daa8f] transition-transform group-open:rotate-180" />
                     </summary>
                     <div className="mt-3 space-y-2 text-sm leading-relaxed text-[#5f6d59]">
-                      <p className="whitespace-pre-line">{product.benefits || "Crafted with care by CLAD."}</p>
+                      <p className="whitespace-pre-line">{product.benefits || "Crafted with care by Madhura Tex."}</p>
                       <p>{buildUsageNote(product)}</p>
                     </div>
                   </details>

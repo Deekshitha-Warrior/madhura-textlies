@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { renderBarcodeSvg } from '../../lib/barcode'
-import { BRAND_EN } from '../../lib/brand'
+import { BRAND_EN, BRAND_SHORT } from '../../lib/brand'
 import { formatCurrency } from '../../lib/retail'
 
 export interface BarcodeLabelProps {
@@ -78,7 +78,7 @@ export const BarcodeLabel: React.FC<BarcodeLabelProps> = ({
             MRP {formatCurrency(mrp)}
           </span>
         ) : (
-          <span className="text-gray-500 text-[8px]">CLAD RETAIL</span>
+          <span className="text-gray-500 text-[8px]">{BRAND_SHORT} RETAIL</span>
         )}
         <span className="font-black text-[11px] text-black">
           {formatCurrency(price)}

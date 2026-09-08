@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Lock, Eye, EyeOff, AlertCircle, ShieldCheck } from 'lucide-react'
 import { useAdminAuthStore } from '../store/store'
-import { BRAND_EN, BRAND_TA, BRAND_SUBTITLE } from '../lib/brand'
+import { BRAND_EN, BRAND_TA, BRAND_LOGO, BRAND_SUBTITLE } from '../lib/brand'
 import { useLangStore } from '../store/langStore'
 
 export default function AdminLogin() {
@@ -42,7 +42,7 @@ export default function AdminLogin() {
         <div className="hidden flex-col justify-between bg-[#0A0A0A] border-r border-[#D4AF37]/20 p-6 lg:p-8 text-white lg:flex overflow-y-auto hide-scrollbar">
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-2xl bg-[#141414] border border-[#D4AF37]/40 px-3.5 py-2 shadow-xl">
-              <span className="font-serif text-lg font-black text-[#D4AF37] tracking-wider">C</span>
+              <img src={BRAND_LOGO} alt={BRAND_EN} className="h-8 w-8 object-contain" />
               <span className="text-xs font-black tracking-widest text-white uppercase">{BRAND_EN}</span>
             </div>
             <p className="text-[10px] font-black uppercase tracking-[0.26em] text-[#D4AF37]">{BRAND_SUBTITLE}</p>

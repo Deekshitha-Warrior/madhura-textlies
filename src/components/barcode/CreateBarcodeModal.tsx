@@ -91,7 +91,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
     setDropdownOpen(false)
 
     // Set default item code (product barcode or generate new code)
-    const code = prod.barcode || `CLAD${Math.floor(1000000 + Math.random() * 9000000)}`
+    const code = prod.barcode || `MTX${Math.floor(1000000 + Math.random() * 9000000)}`
     setItemCode(code)
     setLine1(prod.name)
     setLine2(prod.category || '')
@@ -173,7 +173,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
   }
 
   const handleAssignCode = () => {
-    const generated = 'CLAD' + Math.floor(1000000 + Math.random() * 9000000)
+    const generated = 'MTX' + Math.floor(1000000 + Math.random() * 9000000)
     setItemCode(generated)
   }
 
@@ -325,7 +325,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
       <!DOCTYPE html>
       <html>
         <head>
-          <title>CLAD Barcode Labels</title>
+          <title>Madhura Tex Barcode Labels</title>
           <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
           <style>
             @page {
@@ -431,7 +431,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
       <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 backdrop-blur-sm p-2 sm:p-4 overflow-y-auto animate-in fade-in duration-150">
         <div className="bg-white rounded-3xl max-w-6xl w-full border border-gray-200 shadow-2xl overflow-hidden flex flex-col my-auto max-h-[96vh]">
           {/* TOP BAR matching Screenshot 195106 */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-[#0A0A0A] text-white">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-[#0B2559] text-white">
             <div className="flex items-center gap-2">
               <h2 className="text-base font-black tracking-wide text-white flex items-center gap-1.5">
                 Barcode Generator
@@ -605,7 +605,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
                               productName: selectedProduct.name,
                               variantId: v.id,
                               variantName: v.variantName,
-                              barcodeValue: v.barcode || `CLAD${Math.floor(1000000 + Math.random() * 9000000)}`,
+                              barcodeValue: v.barcode || `MTX${Math.floor(1000000 + Math.random() * 9000000)}`,
                               price: v.price || selectedProduct.price,
                               costPrice: selectedProduct.cost_price || 0,
                               noOfLabels: noOfLabels || 2,
@@ -744,7 +744,7 @@ export const CreateBarcodeModal: React.FC<CreateBarcodeModalProps> = ({
 
                     {/* Item Code */}
                     <span className="text-[10px] font-mono font-bold text-gray-800 tracking-wider">
-                      {itemCode || 'CLAD0000000'}
+                      {itemCode || 'MTX0000000'}
                     </span>
 
                     {/* Custom text lines */}

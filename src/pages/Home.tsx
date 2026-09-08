@@ -42,7 +42,7 @@ interface CustomerReview {
 }
 
 // localStorage fallback (only used when Supabase is not configured)
-const LS_KEY = 'sreeja_bridal_customer_reviews'
+const LS_KEY = 'mtx_customer_reviews'
 function lsGetReviews(): CustomerReview[] {
   try { return JSON.parse(localStorage.getItem(LS_KEY) || '[]') } catch { return [] }
 }

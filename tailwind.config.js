@@ -7,30 +7,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        bgMain:    '#FBFAF6', // Warm luxury linen surface
+        bgMain:    '#F8FAFC', // Clean light slate
         cardBg:    '#FFFFFF',
         brand: {
-          black:      '#0A0A0A',
-          dark:       '#141414',
-          gold:       '#D4AF37',
-          goldHover:  '#C5A059',
-          goldLight:  '#FBF6E9',
+          blue:       '#0B2559', // Primary Royal/Navy
+          blueHover:  '#123E94', // Interactive hover
+          blueLight:  '#E0EDFF', // Light accent surface
+          gold:       '#D4AF37', // Rich yellow gold
+          goldDark:   '#B38018', // Deep metallic gold
+          goldSoft:   '#FFF8E7', // Soft gold highlight
           goldBorder: '#E8D399',
         },
         gold: {
           DEFAULT: '#D4AF37',
-          dark:    '#B48811',
-          light:   '#FBF6E9',
+          dark:    '#B38018',
+          light:   '#FFF8E7',
           border:  '#E8D399',
         },
-        maroon: {
-          DEFAULT: '#D4AF37', // Remapped to luxury Gold
-          dark:    '#0A0A0A', // Remapped to luxury Black
-          light:   '#FBF6E9',
-        },
-        textMain:  '#111111',
-        textMuted: '#6B7280',
-        borderLight: '#E5E7EB', // Neutral clean border
+        textMain:  '#0F172A',
+        textMuted: '#475569',
+        borderLight: '#E2E8F0', // Neutral clean border
       },
       fontFamily: {
         sans:      ['"DM Sans"', '"Outfit"', '"Noto Sans Tamil"', 'system-ui', '-apple-system', 'sans-serif'],

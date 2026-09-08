@@ -30,8 +30,9 @@ export function createInvoicePdf(data: InvoicePdfData): Blob {
   const pageWidth = 210
   const left = 16
   const right = 194
-  const primaryColor = '#D4AF37' // Flamingo Pink
-  const ink = '#18202a'
+  const primaryColor = '#0B2559' // Primary Royal Blue for headers
+  const accentGold = '#D4AF37'
+  const ink = '#0F172A'
   const muted = '#68717c'
   let y = 16
 
@@ -142,7 +143,7 @@ export function createInvoicePdf(data: InvoicePdfData): Blob {
   doc.line(118, y - 3, right, y - 3)
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(14)
-  doc.setTextColor(primaryColor)
+  doc.setTextColor(accentGold)
   doc.text('TOTAL', 143, y + 6, { align: 'right' })
   doc.text(money(data.total), right - 4, y + 6, { align: 'right' })
 
@@ -152,8 +153,8 @@ export function createInvoicePdf(data: InvoicePdfData): Blob {
   doc.line(left, y, right, y)
   doc.setFont('helvetica', 'bold')
   doc.setFontSize(8)
-  doc.setTextColor(primaryColor)
-  doc.text('THANK YOU FOR SHOPPING WITH US', pageWidth / 2, y + 8, { align: 'center' })
+  doc.setTextColor(ink)
+  doc.text('Thank you for shopping at Madhura Tex!', pageWidth / 2, y + 8, { align: 'center' })
   return doc.output('blob')
 }
 

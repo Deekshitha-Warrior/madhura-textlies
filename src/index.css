@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --brand-black: #0A0A0A;
-    --brand-black-surface: #141414;
+    --brand-black: #0B2559;
+    --brand-black-surface: #123E94;
     --brand-gold: #D4AF37;
     --brand-gold-hover: #C5A059;
-    --brand-gold-light: #FBF6E9;
+    --brand-gold-light: #FFF8E7;
     --brand-gold-border: #E8D399;
-    --brand-surface: #FBFAF6;
-    --brand-text-dark: #111111;
-    --brand-text-muted: #6B7280;
+    --brand-surface: #F8FAFC;
+    --brand-text-dark: #0F172A;
+    --brand-text-muted: #475569;
   }
 
   *, *::before, *::after {
@@ -66,11 +66,11 @@
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #FBFAF6;
+    background-color: #F8FAFC;
     background-image:
       radial-gradient(circle at top left, rgba(212, 175, 55, 0.06), transparent 34%),
-      radial-gradient(circle at top right, rgba(10, 10, 10, 0.04), transparent 28%);
-    color: #111111;
+      radial-gradient(circle at top right, rgba(11, 37, 89, 0.04), transparent 28%);
+    color: #0F172A;
     font-family: 'DM Sans', 'Outfit', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -202,7 +202,7 @@
   }
 
   .btn-primary {
-    @apply px-6 py-3 rounded-xl bg-[#0A0A0A] text-[#D4AF37] border border-[#D4AF37] font-bold hover:bg-[#1A1A1A] transition-all;
+    @apply px-6 py-3 rounded-xl bg-[#0B2559] text-[#D4AF37] border border-[#D4AF37] font-bold hover:bg-[#123E94] transition-all;
   }
 
   .btn-secondary {

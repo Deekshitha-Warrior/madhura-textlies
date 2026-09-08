@@ -1,5 +1,5 @@
 {
-  "name": "sreejas-bridal-boutique",
+  "name": "madhura-tex-pos",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "sync:brand": "node scripts/sync-madhuratex.cjs",
     "preview": "vite preview"
   },
   "dependencies": {

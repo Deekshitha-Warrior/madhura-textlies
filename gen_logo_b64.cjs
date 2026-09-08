@@ -1,0 +1,1 @@
+const fs = require('fs'); const img = fs.readFileSync('public/madhura-tex-logo.jpeg'); const b64 = img.toString('base64'); fs.writeFileSync('src/lib/logoBase64.ts', 'export const LOGO_BASE64 = \'data:image/jpeg;base64,' + b64 + '\';\n'); console.log('Logo updated');

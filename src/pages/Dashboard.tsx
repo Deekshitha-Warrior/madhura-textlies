@@ -54,7 +54,7 @@ import { InventoryTable } from '../components/inventory/InventoryTable'
 import { CategoryManagerView } from '../components/inventory/CategoryManagerView'
 import { ExpensesView } from '../components/expenses/ExpensesView'
 import { expenseService, type ExpenseRecord } from '../services/expenseService'
-import { BRAND_EN } from '../lib/brand'
+import { BRAND_EN, BRAND_LOGO } from '../lib/brand'
 import {
   ResponsiveContainer,
   XAxis,
@@ -1515,7 +1515,7 @@ export default function Dashboard() {
         <div className={`hidden lg:flex items-center relative transition-all duration-300 shrink-0 ${sidebarCollapsed ? 'flex-col items-center pt-4 pb-3 px-2 gap-2' : 'px-4 py-3.5 justify-between border-b border-white/5'}`}>
           <Link to="/pos" title="Go to Billing Panel" className={`flex items-center gap-2.5 min-w-0 transition-all duration-300 ${sidebarCollapsed ? 'justify-center' : 'flex-1'}`}>
             <div className="flex items-center justify-center shrink-0 w-9 h-9 rounded-xl bg-[#141414] border border-[#D4AF37]/50 shadow-sm hover:scale-105 transition-transform">
-              <span className="font-serif text-[16px] font-black text-[#D4AF37] leading-none">C</span>
+              <img src={BRAND_LOGO} alt={BRAND_EN} className="h-full w-full object-contain" />
             </div>
             {!sidebarCollapsed && (
               <div className="flex flex-col min-w-0">
@@ -1540,7 +1540,7 @@ export default function Dashboard() {
         <div className="flex lg:hidden items-center justify-between px-3 py-2.5 border-b border-white/10 bg-[#0A0A0A] shrink-0">
           <Link to="/pos" title="Go to Billing Panel" className="flex items-center gap-2.5 min-w-0">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#141414] border border-[#D4AF37]/50 shrink-0 shadow-sm hover:scale-105 transition-transform">
-              <span className="font-serif text-[15px] font-black text-[#D4AF37] leading-none">C</span>
+              <img src={BRAND_LOGO} alt={BRAND_EN} className="h-full w-full object-contain" />
             </div>
             <div className="flex items-center gap-2">
               <span className="text-[16px] font-black text-white tracking-wider truncate">{BRAND_EN}</span>

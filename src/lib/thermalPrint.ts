@@ -159,7 +159,7 @@ export function printThermalReceipt(data: ThermalReceiptData) {
         </div>
 
         <div class="text-center mt-2" style="font-size: 11px;">
-          <div class="font-bold">Thank you for shopping at CLAD!</div>
+          <div class="font-bold">Thank you for shopping at ${BRAND_EN}!</div>
           <div>Follow us on Instagram: @${BRAND_INSTAGRAM}</div>
         </div>
       </body>

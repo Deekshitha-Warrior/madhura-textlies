@@ -55,24 +55,19 @@ export const buildProfessionalWhatsAppMessage = (input: BuildWhatsAppMessageInpu
   const itemsText = input.items && input.items.length > 0
     ? input.items.map(item => `• ${item.name} (x${item.qty}) - ₹ ${Number(item.lineTotal || 0).toFixed(2)}`).join('\n')
     : ''
+  return `*Madhura Tex - Purchase Invoice*
+━━━━━━━━━━━━━━━━━━━━━
+Dear ${customerName}, thank you for shopping with us!
 
-  return `✨ *${BRAND_EN}* ✨
-🛍️ *Official Purchase Invoice & Receipt* 🛍️
+🧾 INVOICE: #${formattedNo}
+${input.invoiceDate ? `📅 Date: ${new Date(input.invoiceDate).toLocaleDateString('en-IN')}\n` : ''}${input.paymentMode ? `💳 Payment Mode: ${input.paymentMode}\n` : ''}${input.total !== undefined ? `💰 Total Amount: ₹ ${Number(input.total || 0).toFixed(2)}\n` : ''}
+${itemsText ? `\nItems:\n${itemsText}\n` : ''}
+View & Download: ${invoiceUrl}
 
-Dear ${customerName},
+Contact: 9626555535 / 8682037615
+Address: Malar complex, Pondy - Sellipet Main road, Kalithirampattu - Kandamangalam Junction
 
-Thank you for shopping at ${BRAND_EN}! We truly appreciate your patronage.
-
-🧾 *INVOICE DETAILS*
-📌 *Invoice No:* #${formattedNo}
-${input.invoiceDate ? `📅 *Date:* ${new Date(input.invoiceDate).toLocaleDateString('en-IN')}\n` : ''}${input.paymentMode ? `💳 *Payment Mode:* ${input.paymentMode}\n` : ''}${input.total !== undefined ? `💰 *Total Amount:* ₹ ${Number(input.total || 0).toFixed(2)}\n` : ''}
-${itemsText ? `📦 *ITEMS ORDERED:*\n${itemsText}\n\n` : ''}📄 *View & Download Digital Invoice / PDF:*
-👉 ${invoiceUrl}
-
-📞 *Shop Contact:* ${BRAND_PRIMARY_PHONE_DISPLAY}
-📷 *Follow us on Instagram:* ${BRAND_INSTAGRAM_URL}
-
-Thank you, and visit us again! ✨`
+Thank you for shopping with us!`
 }
 
 export const buildAdvanceDepositWhatsAppMessage = (input: AdvanceDepositWhatsAppInput) => {
