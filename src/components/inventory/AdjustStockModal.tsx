@@ -273,10 +273,13 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
                       -
                     </button>
                     <input
-                      type="number"
-                      min="1"
+                      type="text"
+                      inputMode="numeric"
                       value={addQuantity}
-                      onChange={(e) => setAddQuantity(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value, 10) || 0))}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, '')
+                        setAddQuantity(value === '' ? '' : Number(value))
+                      }}
                       required
                       className="flex-1 text-center font-black text-xl py-1.5 rounded-lg border-2 border-emerald-400 bg-white text-emerald-950 focus:border-emerald-600 outline-none shadow-sm"
                     />
@@ -298,11 +301,7 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
                       key={preset}
                       type="button"
                       onClick={() => setAddQuantity(preset)}
-                      className={`px-2 py-0.5 rounded-md text-[11px] font-bold border transition-colors cursor-pointer ${
-                        addQuantity === preset
-                          ? 'bg-emerald-600 text-white border-emerald-600'
-                          : 'bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-100'
-                      }`}
+                      className="px-2 py-0.5 rounded-md text-[11px] font-bold border transition-colors cursor-pointer bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-100"
                     >
                       +{preset}
                     </button>
@@ -374,11 +373,13 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
                       -
                     </button>
                     <input
-                      type="number"
-                      min="1"
-                      max={currentStock}
+                      type="text"
+                      inputMode="numeric"
                       value={removeQuantity}
-                      onChange={(e) => setRemoveQuantity(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value, 10) || 0))}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, '')
+                        setRemoveQuantity(value === '' ? '' : Number(value))
+                      }}
                       required
                       className="flex-1 text-center font-black text-xl py-1.5 rounded-lg border-2 border-rose-400 bg-white text-rose-950 focus:border-rose-600 outline-none shadow-sm"
                     />
@@ -400,11 +401,7 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
                       key={preset}
                       type="button"
                       onClick={() => setRemoveQuantity(preset)}
-                      className={`px-2 py-0.5 rounded-md text-[11px] font-bold border transition-colors cursor-pointer ${
-                        removeQuantity === preset
-                          ? 'bg-rose-600 text-white border-rose-600'
-                          : 'bg-white text-rose-900 border-rose-200 hover:bg-rose-100'
-                      }`}
+                      className="px-2 py-0.5 rounded-md text-[11px] font-bold border transition-colors cursor-pointer bg-white text-rose-900 border-rose-200 hover:bg-rose-100"
                     >
                       -{preset}
                     </button>
@@ -422,7 +419,6 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
               </div>
             )}
 
-            {/* MODE 3: RECONCILIATION COUNT INPUT */}
             {mode === 'CORRECTION' && (
               <div className="space-y-2.5 bg-amber-50/60 border border-[#E8D399] p-3 sm:p-3.5 rounded-xl">
                 <div>
@@ -438,10 +434,13 @@ export const AdjustStockModal: React.FC<AdjustStockModalProps> = ({
                       -
                     </button>
                     <input
-                      type="number"
-                      min="0"
+                      type="text"
+                      inputMode="numeric"
                       value={correctedQuantity}
-                      onChange={(e) => setCorrectedQuantity(e.target.value === '' ? '' : Math.max(0, parseInt(e.target.value, 10) || 0))}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, '')
+                        setCorrectedQuantity(value === '' ? '' : Number(value))
+                      }}
                       required
                       className="flex-1 text-center font-black text-xl py-1.5 rounded-lg border-2 border-[#D4AF37] bg-white text-black focus:border-black outline-none shadow-sm"
                     />
