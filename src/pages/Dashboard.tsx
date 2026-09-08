@@ -147,6 +147,21 @@ const exportCSV = (orders: DashboardOrder[]) => {
   URL.revokeObjectURL(url)
 }
 
+const downloadAnalyticsCSV = (filename: string, rows: Record<string, unknown>[]) => {
+  if (rows.length === 0) return
+  const header = Object.keys(rows[0])
+  const csv = [header, ...rows.map(row => header.map(key => row[key] ?? ''))]
+    .map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(','))
+    .join('\n')
+  const blob = new Blob(['\ufeff' + csv], { type: 'text/csv;charset=utf-8;' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = filename
+  link.click()
+  URL.revokeObjectURL(url)
+}
+
 const UNIT_TYPE_OPTIONS: { value: UnitType; label: string; hint: string }[] = [
   { value: 'unit',   label: 'Unit (piece)',    hint: 'e.g. Blouse, earrings, perfume' },
   { value: 'weight', label: 'Weight (g / kg)', hint: 'For weight-based boutique items' },
@@ -719,6 +734,68 @@ export default function Dashboard() {
       return true
     })
   }, [searchResults, billTypeFilter])
+
+  const exportAnalyticsSnapshot = () => {
+    const dateLabel = analyticsDateFrom || analyticsDateTo
+      ? `${analyticsDateFrom || 'start'}_to_${analyticsDateTo || 'today'}`
+      : 'all-time'
+
+    if (posAnalyticsTab === 'revenue') {
+      downloadAnalyticsCSV(`analytics-revenue_${dateLabel}.csv`, [
+        { Metric: 'Total Revenue', Value: formatCurrency(analytics.totalCompletedRevenue) },
+        { Metric: 'Net Profit/Loss', Value: formatCurrency(analytics.netProfit) },
+        { Metric: 'Total Expenses', Value: formatCurrency(analytics.totalExpenses) },
+        { Metric: 'Completed Bills', Value: analytics.completedOrders },
+        { Metric: 'Offline Revenue', Value: formatCurrency(analytics.posRevenue) },
+        { Metric: 'Online Revenue', Value: formatCurrency(analytics.onlinePosRevenue) },
+        { Metric: 'Manual Sales Revenue', Value: formatCurrency(analytics.manualRevenue) },
+      ])
+      return
+    }
+
+    if (posAnalyticsTab === 'today') {
+      const query = todayBillsSearch.trim().toLowerCase()
+      const bills = analytics.todayBills.filter(bill => !query || bill.invoice_no?.toLowerCase().includes(query))
+      downloadAnalyticsCSV(`analytics-today_${new Date().toISOString().slice(0, 10)}.csv`, bills.map(bill => ({
+        Invoice: formatInvoiceNo(bill.invoice_no),
+        Customer: bill.customer_name,
+        Total: getOrderTotal(bill).toFixed(2),
+        Time: new Date(bill.created_at).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }),
+        Type: normalizeOrderType(bill.order_type) === 'manual_sale' ? 'MANUAL' : normalizeOrderMode(bill.order_mode) === 'online' ? 'ONLINE' : 'OFFLINE',
+        Status: bill.status,
+      })))
+      return
+    }
+
+    if (posAnalyticsTab === 'products') {
+      const query = productAnalyticsSearch.trim().toLowerCase()
+      const productRows = analytics.topProducts.filter(product => !query || product.name.toLowerCase().includes(query) || (product.variant && product.variant.toLowerCase().includes(query)))
+      downloadAnalyticsCSV(`analytics-products_${dateLabel}.csv`, productRows.map(product => ({
+        Product: product.name,
+        'Variant / SKU': product.variant || '',
+        'Qty Sold': Math.round(product.qty),
+        Revenue: product.revenue.toFixed(2),
+        Bills: product.billCount,
+        'Avg Revenue/Bill': (product.billCount > 0 ? product.revenue / product.billCount : 0).toFixed(2),
+      })))
+      return
+    }
+
+    if (posAnalyticsTab === 'categories') {
+      downloadAnalyticsCSV(`analytics-categories_${dateLabel}.csv`, analytics.topCategories.map(category => ({
+        Category: category.name,
+        Revenue: category.revenue.toFixed(2),
+        'Qty Sold': Math.round(category.qty),
+      })))
+      return
+    }
+
+    downloadAnalyticsCSV(`analytics-coupons_${dateLabel}.csv`, analytics.topCoupons.map(coupon => ({
+      Coupon: coupon.code,
+      Usage: coupon.usage,
+      Discounts: coupon.discounts.toFixed(2),
+    })))
+  }
 
   // Load dashboard data
   const loadData = useCallback(async () => {
@@ -2164,8 +2241,21 @@ export default function Dashboard() {
         {tab === 'pos_analytics' && (
           <div className="space-y-6">
             <div>
-              <h2 className="text-[24px] font-bold text-[#0F172A]">POS Analytics</h2>
-              <p className="text-[13px] text-[#6B7280]">Real time store & channel insights</p>
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h2 className="text-[24px] font-bold text-[#0F172A]">POS Analytics</h2>
+                  <p className="text-[13px] text-[#6B7280]">Real time store & channel insights</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={exportAnalyticsSnapshot}
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#0B2559] px-4 py-2.5 text-[12px] font-black text-white shadow-sm transition-colors hover:bg-[#123E94]"
+                  title={`Export current ${posAnalyticsTab} analytics snapshot as CSV`}
+                >
+                  <Download size={15} />
+                  Export CSV
+                </button>
+              </div>
             </div>
 
             <div className="flex flex-col gap-4 border-b border-[#E7E7E7] pb-4 md:flex-row md:items-center md:justify-between">
