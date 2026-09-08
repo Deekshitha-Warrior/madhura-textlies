@@ -678,7 +678,9 @@ export default function Pos(props: PosProps = {}) {
         couponPercentage: appliedCoupon?.percentage,
         totalGst,
         gstEnabled: billGstEnabled,
-        paymentMethod: paymentMode
+        paymentMethod: paymentMode,
+        remarks: remarks.trim(),
+        referenceNumber: referenceNumber.trim(),
       })
 
       // ── CRITICAL: immediately fix totals in DB, independent of PDF upload ──

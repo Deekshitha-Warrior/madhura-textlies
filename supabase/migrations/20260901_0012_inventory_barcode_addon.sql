@@ -440,8 +440,8 @@ BEGIN
     COALESCE(p_coupon_percentage, 0), COALESCE(p_total_gst, 0),
     COALESCE(p_total_gst, 0), COALESCE(p_gst_enabled, FALSE),
     COALESCE(p_payment_method, 'cash'), COALESCE(p_payment_method, 'cash'),
-    COALESCE(p_split_details, '{}'::JSONB), p_remarks,
-    p_reference_number, p_billing_date, v_created_at, NOW()
+    COALESCE(p_split_details, '{}'::JSONB), COALESCE(p_remarks, ''),
+    COALESCE(p_reference_number, ''), p_billing_date, v_created_at, NOW()
   )
   RETURNING id INTO v_order_id;
 
